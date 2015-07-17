@@ -1,0 +1,50 @@
+
+<h2>TimeLine</h2>
+
+<div id="block" class="box-timeline">
+	<div class="box-spine"></div>
+
+	<% (0...10).each do |counter| %>
+
+	<div class="grid-50 mobile-grid-100 box-timeline-pointer 
+	<% if [3,5,8].include?(counter) %> box-done<% end %>
+	<% if counter % 2 == 1 %> box-left <% else %> box-right <% end %>">
+		<div class="box-dot"></div>
+		<div class="box-timeline-container">
+			<span class="box-timeline-type">任务类型</span>
+			<span class="box-timeline-date">05 June 2015</span>
+			<div class="box-updated">File is already prepared</div>
+			<div class="box-avatar">
+				<span><%=image_tag('test_file/test_avatar.png', :style=> 'width: 40px;height: 40px;')%></span>
+			</div>
+			<div class="box-mission">
+					<%=image_tag('test_file/safe_image.php.jpg')%>
+					<div class="box-mission-desc">
+						<div class="box-mission-title"><a class="box-mission-link" href="#">Lee (@MelonHTML5) posted a photo on Twitter</a></div>
+						<p class="box-mission-desc">
+						
+						<%="Get the whole picture - and other photos from Lee"*counter %>
+						</p>
+					</div>
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>
+
+<style>
+#block {
+	overflow: auto;
+}
+</style>
+<script>
+$(function(){
+
+	$('.box-spine').attr({ style: 'height: '+$('#block').height()+'px' })
+
+	$('.box-timeline').masonry({
+	  // options
+	  itemSelector: '.grid-50',
+	});
+});
+</script>

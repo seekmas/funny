@@ -1,0 +1,47 @@
+<div class="uk-width-3-3">
+
+	<h3>Component List</h3>
+
+	<table class="uk-table uk-table-striped">
+
+		<tr>
+			<td>Component Name</td>
+			<td>Component Description</td>
+			<td>Gear Key</td>
+			<td>Gear Description</td>
+			<td>Gear Type</td>
+		</tr>
+		<% @components.each do |component| %>
+
+			<tr>
+				<td>
+
+					<% if component.available == true %>
+						Enabled
+					<% else %>
+						Disabled
+					<% end %>
+
+					<%= link_to component.name , design_default_form_get_path(component.id) %>
+					<%= link_to 'Edit', design_default_edit_get_path(component.id) %>
+				</td>
+				<td><%=component.description%></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<% component.gears.each do |gear| %>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><%=gear.gear_key%></td>
+					<td><%=gear.gear_description %></td>
+					<td><%=gear.gear_type %></td>
+				</tr>
+			<% end %>
+		<% end %>
+
+	</table>
+
+</div>

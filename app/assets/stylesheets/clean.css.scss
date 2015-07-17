@@ -1,0 +1,32 @@
+@import "lightslider/dist/css/lightslider";
+* {
+    box-sizing: border-box;
+    font-family: "Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+
+.lSAction > a {
+    width: 32px;
+    display: block;
+    top: 50%;
+    height: 32px;
+    background-image: image-url('controls.png');
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -16px;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.35s linear 0s;
+    transition: opacity 0.35s linear 0s;
+}
+
+.lSSlideOuter.vertical .lSAction > .lSPrev {
+    background-position: 0px -31px;
+    bottom: auto;
+    top: 30px;
+}
+
+.lSSlideOuter.vertical .lSAction > .lSNext {
+    background-position: 31px -31px;
+    bottom: 45px;
+    top: auto;
+}

@@ -1,0 +1,19 @@
+<div class="nested-fields uk-grid" data-uk-grid-match>
+	<div class="uk-width-1-5">
+		<%=f.input :gear_key, :label => false, :placeholder => "字段名" ,:wrapper_html => false %>
+	</div>
+
+	<div class="uk-width-1-5">
+	<%=f.input :gear_description, :label => false, :placeholder => "字段介绍" ,:wrapper_html => false  %>
+	</div>
+
+	<div class="uk-width-1-5">
+		<%=f.association :gear_type, :label => false, :placeholder => "字段类型" ,:wrapper_html => false %>
+	</div>
+
+	<div class="uk-width-1-5">
+		<%=f.input :select_data, :label => false, :placeholder => "下拉备选数据，用,隔开" %>
+	</div>
+
+	<%=link_to_remove_association 'Remove', f %>
+</div>

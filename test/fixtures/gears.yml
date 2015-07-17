@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gear_key: MyString
+  gear_description: MyText
+  gear_type_id: 1
+  component_id: 1
+
+two:
+  gear_key: MyString
+  gear_description: MyText
+  gear_type_id: 1
+  component_id: 1

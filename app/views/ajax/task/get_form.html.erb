@@ -1,0 +1,29 @@
+<%=simple_form_for(@task, :url => get_form_post_path(@task.id), :method => :post) do |f|%>
+	
+	<div class="box-tl-row">
+		<%=f.input :task_title, :as => :text, :wrapper => false, :label => false, :placeholder => '任务名称' %>
+	</div>
+	
+	<div class="box-tl-row">
+		<%=f.input :task_requirement, :wrapper => false, :label => false, :placeholder => '任务备注'  %>
+	</div>
+
+	<div class="box-tl-row">
+		<% if @task.expired_at %>
+			<%=f.input :expired_at, :as => 'string', :input_html => { :value => @task.expired_at.strftime("%Y.%m.%d"), :class => "box-datetimepicker" } ,:wrapper => false, :label => false, :placeholder => '任务截止日期'  %>
+		<% else %>
+			<%=f.input :expired_at, :as => 'string', :input_html => { :class => "box-datetimepicker" } ,:wrapper => false, :label => false, :placeholder => '任务截止日期'  %>
+		<% end %>
+	</div>
+	<div class="box-tl-row">
+		
+		<%=f.button :submit ,"保存" %>
+		
+		<input id="cancel" name="cancel" value="关闭" class="cancel btn" type="button">
+
+		<input id="finish" name="cancel" value="完成任务" class="finish btn" type="button">
+
+		<input id="remove" name="cancel" value="删除任务" class="remove btn" type="button">
+
+	</div>
+<% end %>

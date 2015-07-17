@@ -1,0 +1,89 @@
+<h2>创建任务</h2>
+
+<div class="p_form_row">
+  <label ng-show="!task.task_title">任务标题</label><label ng-show="task.task_title" class="p_highlight">任务标题</label>:
+  <textarea class="p_title" ng-model="task.task_title" placeholder="给我一个任务标题" value="{{ task.task_title }}"></textarea>
+</div>
+
+<div class="p_form_row">
+  <label ng-show="!task.task_description">任务描述</label><label ng-show="task.task_description" class="p_highlight">任务描述</label>:
+  <textarea ng-model="task.task_description"></textarea>
+</div>
+<!-- <div class="p_form_row">
+  <label ng-show="!task.project_id">项目</label><label ng-show="task.project_id"class="p_highlight">项目</label>:
+  <input ng-model="task.project_id" type="text" placeholder="选择一个项目或者会议" />
+</div> -->
+
+<!-- <div class="p_form_row">
+  <label ng-show="true">任务负责人</label><label ng-show="false" class="p_highlight">任务负责人</label>:
+  <input
+  mentio
+  mentio-id="thePeople"
+  mentio-macros="macros"
+  mentio-trigger-char="'@'"
+  mentio-search=""
+  mentio-select="getSelectedPeople(item)"
+  mentio-typed-term="typedTerm"
+  mentio-items="people | filter:label:typedTerm"
+  ng-model="task.people_work_for"
+  type="text" placeholder="把任务分配给一些人,{{ assign_to }}" />
+</div> -->
+
+<!-- <div class="p_form_row">
+  <label ng-show="true">通知给</label><label class="p_highlight" ng-show="false">通知给</label>:
+  <input
+  mentio
+  mentio-id="thePeople"
+  mentio-macros="macros"
+  mentio-trigger-char="'@'"
+  mentio-search=""
+  mentio-select="getSelectedPeople(item)"
+  mentio-typed-term="typedTerm"
+  mentio-items="people | filter:label:typedTerm"
+  ng-model="task.notification_list"
+  type="text" placeholder="给一些人通知任务的进度,{{ assign_to }}" />
+</div>
+
+<div class="p_form_row">
+  <label ng-show="true">加个标签</label><label ng-show="false" class="p_highlight">加个标签</label>:
+  <input ng-model="task.tags" type="text" placeholder="定义任务的性质" />
+</div> -->
+
+<div class="p_form_row">
+  <label ng-show="!task.expired_at">到期日</label><label ng-show="task.expired_at" class="p_highlight">到期日</label>:
+  <datepicker date-min-limit="" date-max-limit="" date-format="yyyy-MM-dd">
+    <input ng-model="task.expired_at" type="text" placeholder="设置任务到期日" />
+  </datepicker>
+</div>
+<!-- <div
+    angular-multi-select
+    input-model="categories"
+    item-label="{{ name }}"
+    tick-property="checked"
+    button-label="{{ icon }} {{ name }}"
+    selection-mode="single"
+>
+</div> -->
+
+<div class="p_form_row">
+  <label ng-show="!task.work_category_id">任务阶段</label><label ng-show="task.work_category_id" class="p_highlight">任务阶段</label>:
+  <select ng-model="task.work_category_id">
+    <option value="{{ category.id }}" ng-repeat="category in categories">{{ category.name }}</option>
+  </select>
+</div>
+
+<div class="p_form_row">
+  <label ng-show="!task.task_type_id">任务分类</label><label ng-show="task.task_type_id" class="p_highlight">任务分类</label>:
+  <select ng-model="task.task_type_id">
+    <option value="{{ type.id }}" ng-repeat="type in types">{{ type.type_name }}</option>
+  </select>
+</div>
+
+
+
+<div class="button-group">
+  <input type="button" value="设定任务" ng-click="refresh_data()" />
+  <input type="button" value="取消" ng-click="cancel()" />
+</div>
+
+<div class="box-deliver-right"></div>

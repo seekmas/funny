@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @work_category.name %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @work_category.project_id %>
+</p>
+
+<p>
+  <strong>Is allowed:</strong>
+  <%= @work_category.is_allowed %>
+</p>
+
+<%= link_to 'Edit', edit_work_category_path(@work_category) %> |
+<%= link_to 'Back', work_categories_path %>

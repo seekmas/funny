@@ -1,0 +1,275 @@
+<div id="wrapper">
+    <div id="lottery">
+        <div id="lottery-hero">
+            <span>中奖号码</span>
+        </div>
+
+        <div id="lottery-container" data-url="<%=cheerup_get_phones_path(@work.uuid, :format => :txt)%>">
+            <ul></ul>
+        </div>
+        <div id="lottery-control">
+            <a href="#" onclick="Lottery.start()">START</a>
+            <a href="#" onclick="Lottery.stop()">STOP</a>
+        </div>
+        <div id="lottery-selected"></div>
+    </div>
+</div>
+
+<style>
+
+body {
+  box-sizing: border-box;
+  font-family: Times;
+}
+
+#wrapper{
+    width: 1000px;
+    margin:0 auto;
+}
+
+#lottery {
+  bottom: 10px;
+  position: fixed;
+  width: 994px;
+}
+
+#lottery ul {
+    width: 20000px;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#lottery li {
+  color: #FFFFFF;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #F06199;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 15px 0 0 0 ;
+    height: 60px;
+}
+
+#lottery li img {
+    width: 132px;
+    border: 0;
+}
+
+#lottery-control {
+  height: 14px;
+  margin: 40px auto 0;
+  width: 200px;
+}
+
+#lottery-control a{
+    float: right;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#lottery-control a:first-child{
+    float: left;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#lottery-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 994px;
+    height: 75px;
+}
+
+#lottery-selected {
+    border: 5px dashed #ff0;
+    bottom: 0;
+    height: 80px;
+    left: -5px;
+    margin: -133px auto 0;
+    position: relative;
+    width: 142px;
+}
+
+#lottery-hero{
+    border: medium none;
+    margin: 0 auto 9%;
+    width: 300px;
+}
+
+#lottery-hero img{
+    width: 300px;
+}
+
+
+.byphone #lottery li b {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  width: 132px;
+}
+
+.byphone #lottery-hero {
+  padding: 10px 0;
+  background-color: #9777B5;
+  color: #FFFFFF;
+  font-size: 100px;
+  margin: 0 auto 20%;
+  text-align: center;
+  line-height: 120px;
+  width: 800px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+</style>
+<script>
+/*
+* Photo Lottery
+* Author: Kris Zhang
+* Lincense: MIT
+* https://github.com/newghost/js-lottery.git
+*/
+/*
+Fix old IE.
+*/
+var Audio = Audio || function() {
+  var self  = this;
+  self.play = self.stop = new Function();
+};
+
+var selected = {}
+
+var Lottery = (function() {
+
+  var timer           = null
+    , itemWidth       = 142
+    , itemCount       = 0
+    , curPos          = 0
+    ;
+
+  var stopAudio       = new Audio("res/ping.mp3")
+    , backAudio       = new Audio("res/back.mp3")
+    ;
+
+
+  backAudio.loop = true;
+
+  var $container      = $("#lottery-container")
+    , $content        = $("#lottery-container ul")
+    , $item
+    , $hero           = $("#lottery-hero span")
+    ;
+
+  var init = function() {
+
+    $.ajax({
+        url: $container.data("url")
+      , dataType: "text"
+      , success: function(data) {
+        var phones = data.toString().split('\r\n');
+
+        for (var i = 0; i < phones.length; i++) {
+          var phone = phones[i];
+          phone && $content.append("<li><b>" + phone + "</b></li>");
+        }
+
+        $item           = $("#lottery-container ul li"),
+
+        //Pre-caculate the count of items
+        itemCount       = $item.size();
+        //Clone the contents
+        $content.append($content.html());
+      }
+    });
+
+  };
+
+  var start  = function() {
+    clearInterval(timer);
+
+    backAudio.play();
+    stopAudio.pause();
+    $(document.body).addClass("stop");
+
+    timer = setInterval(function() {
+
+      curPos = parseInt($content.css("left")) | 0;
+      curPos -= itemWidth / 2;
+
+      (curPos < 0 - itemWidth * itemCount) && (curPos = 0);
+
+      $content.css("left", curPos);
+
+    }, 100);
+
+    $hero.hide();
+  };
+
+  var stop = function() {
+    clearInterval(timer);
+    timer = null;
+
+    backAudio.pause();
+    stopAudio.play();
+    $(document.body).removeClass("stop");
+
+    //Roll at the half width?
+    (curPos % itemWidth == 0 - itemWidth / 2) && (curPos = curPos - itemWidth / 2);
+
+    var selected  = getCurIdx();
+
+    console.log(selected);
+
+    setCurIdx(selected);
+  };
+
+  var running = function() {
+    return timer != null;
+  };
+
+  //Index: first item on the left
+  var setCurIdx = function(idx) {
+    curPos = (0 - idx) * itemWidth;
+
+    var $items = $("#lottery li b"),
+        phone  = $items.eq(idx + 3).html();
+
+    $content.css("left", curPos);
+    $hero.html(phone).show('slow');
+
+    console.log(curPos, idx);
+  };
+
+  var getCurIdx = function() {
+    return (0 - curPos) / itemWidth;
+  };
+
+  return {
+      init: init
+    , start: start
+    , stop: stop
+    , running: running
+    , setCurIdx: setCurIdx
+    , getCurIdx: getCurIdx
+  };
+
+})();
+
+$(document).ready(function() {
+  Lottery.init();
+});
+
+$(document).keydown(function(e) {
+    var key = e.keyCode;
+    if (key != 32 && key != 13) return;
+
+    Lottery.running()
+      ? Lottery.stop()
+      : Lottery.start();
+});
+</script>

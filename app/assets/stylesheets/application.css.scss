@@ -1,0 +1,23 @@
+@import "unsemantic/assets/sass/unsemantic-grid-responsive.scss";
+@import "style/normalize.css";
+@import "jquery.datetimepicker.css.scss";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "animate.css/animate.min.css";
+@import "style/box_element.css.scss";
+@import "style/box_theme.css.scss";
+@import "style/box_selectable.css.scss";
+@import "style/box_user.css.scss";
+@import "style/box_menu.css.scss";
+@import "style/box_timeline.css.scss";
+@import "style/box_nav.css.scss";
+@import "style/box_responsive.css.scss";
+
+* {
+	box-sizing: border-box;
+	font-smoothing: antialiased;
+}
+
+body {
+	height: auto;
+}

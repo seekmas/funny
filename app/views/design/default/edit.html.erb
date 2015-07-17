@@ -1,0 +1,47 @@
+
+
+<%=simple_form_for(@component, :url => '', :method => :put , :html => { :class => 'uk-form uk-form-stacked' }) do |f| %>
+
+<h3>设计表单</h3>
+
+	<div class="uk-form-row">
+		<%=f.input :name, :placeholder => "表单名" , :label => false, :wrapper_html => false %>
+	</div>
+
+	<div class="uk-form-row" style="margin-bottom: 25px;">
+		<%=f.input :description, :placeholder => "表单介绍" , :label => false, :wrapper_html => false %>
+	</div>
+	
+	<div class="uk-form-row">
+		<label>表单可用？</label>
+		<%=f.input :available, :label => false, :wrapper_html => false %>
+	</div>
+
+	<div class="uk-placeholder-large" id="gears">
+		<%=f.simple_fields_for :gears do |gear| %>
+					<%=render 'gear_fields', :f => gear %>
+		<% end %>
+		<%=link_to_add_association '添加字段', f, :gears %>
+	</div>
+
+	<div class="uk-placeholder-large"> 
+		<%=f.button :submit, :class => 'uk-button' %>
+	<div>
+<% end %>
+
+
+<script>
+$(function(){
+
+	$('.select').on('change', function(e){
+		if($(this).find('option:selected').text() == 'select'){
+			$hidden = $(this).parent().parent().find('textarea:last')
+			$hidden.attr({ class: ''});
+		}else {
+			$hidden = $(this).parent().parent().find('textarea:last')
+			$hidden.attr({ class: 'hidden'});
+		}
+	});
+
+});
+</script>

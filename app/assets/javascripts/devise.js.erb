@@ -1,0 +1,220 @@
+<% environment.context_class.instance_eval { include Rails.application.routes.url_helpers } %>
+
+var app = angular.module("devise",['ui.router','ui.validate','ngFileUpload','ngResource'])
+.factory('InviteLetter', ['$resource',function($resource) {
+  return $resource('/api/invite_letters/:id', { id: '@id' }, {
+    'get': { method: 'GET', isArray: true },
+    'create': { method: 'POST', isArray: false },
+    'put': { method: 'PUT' }
+  });
+}])
+.config(function($stateProvider) {
+  $stateProvider
+    .state('index', {
+      url: "",
+      views: {
+        "view": { templateUrl: "home.html" }
+      }
+    })
+    .state('default', {
+      url: "/",
+      views: {
+        "view": { templateUrl: "home.html" }
+      }
+    })
+    .state('sign_in', {
+      url: "/sign_in",
+      views: {
+        "view": { templateUrl: "sign_in.html" }
+      }
+    })
+    .state('sign_up', {
+      url: "/sign_up",
+      views: {
+        "view": { templateUrl: "sign_up.html" }
+      }
+    })
+    .state('feature', {
+      url: "/feature",
+      views: {
+        "view": { templateUrl: "feature.html" }
+      }
+    })
+    .state('about', {
+      url: "/about",
+      views: {
+        "view": { templateUrl: "about.html" }
+      }
+    })
+    .state('profile', {
+      url: "/profile",
+      views: {
+        "view": { templateUrl: "profile.html" }
+      }
+    })
+    .state('welcome', {
+      url: "/welcome",
+      views: {
+        "view": { templateUrl: "welcome.html" }
+      }
+    })
+    .state('invite', {
+      url: "/invite",
+      views: {
+        "view": { templateUrl: "invite.html" }
+      }
+    })
+    .state('letter', {
+      url: "/letter",
+      views: {
+        "view": { templateUrl: "letter.html" }
+      }
+    })
+    .state('done', {
+      url: "/done",
+      views: {
+        "view": { templateUrl: "done.html" }
+      }
+    })
+    ;
+})
+.controller("AppController", ['$scope', '$state', '$http', 'Upload', 'InviteLetter', function($scope, $state, $http, Upload, InviteLetter){
+
+  var email_sign_up = { id: 1 , title: "Email 注册" };
+  var phone_sign_up = { id: 2 , title: "手机号注册" };
+  $scope.invite_letter = {};
+  $scope.invite_letter.email_content = "大家好，欢迎加入我的婚礼筹备团队，我们可以通过婚格进行沟通协作，点击链接即可加入我的婚格空间。";
+  $scope.sign_up_with = phone_sign_up;
+
+  $scope.sign_up = function() {
+    if($scope.info == undefined) {
+      $scope.error = "账号不能为空";
+      $scope.error_class = "form_error";
+      return ;
+    }
+    if($scope.info.username != undefined || $scope.info.username != '') {
+      if($scope.info.username.toString().length != 11)
+      {
+        $scope.error = "手机号长度不对";
+        $scope.error_class = "form_error";
+        return ;
+      }
+    }
+
+    $http.post('/api/user', { user: { username: $scope.info.username }}).then(function(response) {
+      if( response.data == null ){
+        $scope.error = null;
+        $scope.error_class = null;
+
+        $state.go("profile");
+      }else {
+        $scope.error = "账号已经被注册";
+        $scope.error_class = "form_error";
+      }
+    });
+  };
+
+  $scope.sign_up_method = function() {
+    if($scope.sign_up_with == phone_sign_up) {
+      $scope.sign_up_with = email_sign_up;
+    }else {
+      $scope.sign_up_with = phone_sign_up;
+    }
+  };
+
+  $scope.invite = function() {
+
+    if(($scope.info.username == undefined || $scope.info.username == null) && ($scope.info.email == undefined || $scope.info.email == null)) {
+      $scope.error = "账号不能为空";
+      $scope.error_class = "form_error";
+      $state.go('index');
+      return ;
+    }
+
+    if($scope.files != undefined || $scope.files != null) {
+      $scope.info.avatar = $scope.files[0];
+    }
+
+    $http.post(
+      '<%=api_angular_sign_up_with_phone_path%>',{ info: $scope.info }).then(function(response){
+        console.log(response.data);
+        $state.go("welcome");
+      });
+  };
+
+  $scope.send_invite = function() {
+    InviteLetter.create({ invite_letter: $scope.invite_letter }, function(response){
+
+    });
+
+    $state.go('letter');
+  };
+
+  $scope.enter = function() {
+    console.log( $scope.invite_letter.email_content );
+
+    InviteLetter.put({ id: 1 , email_content: $scope.invite_letter.email_content }, function(response){
+
+      // $http.post('<%=api_angular_send_invite_email_path%>', {}).then(function(response){
+      //   //console.log(response.data);
+      //   //window.location.reload();
+      //   window.location.href = '/';
+      // });
+
+    });
+  };
+
+  $scope.login_user = function(login){
+    console.log(login);
+    $http.post('/api/user/user_sign_in' , { user: login }).then(function(response){
+      console.log(response.data);
+      $scope.response = response.data.response;
+
+      if( response.data.status) {
+        window.location.reload();
+      }
+
+    });
+  };
+
+  $scope.enter_hunge = function() {
+    window.location.reload();
+  }
+
+  $scope.isPasswordNotValid = function(value) {
+    if(value == undefined || value == null){
+      return false;
+    }else {
+      if( value.length < 6){
+        return false
+      }else if( value.length > 72 ) {
+        return false;
+      }else {
+        return true
+      }
+    }
+  }
+
+  $scope.isNameNotValid = function(value) {
+    if(value == undefined || value == null){
+      return false;
+    }
+
+    if(value.length < 1)
+      return false;
+    else
+      return true;
+  };
+
+  $scope.isProjectNameNotValid = function(value) {
+    if(value == undefined || value == null) {
+      return false;
+    }
+    if(value.length < 2)
+      return false;
+    else
+      return true;
+  };
+
+
+}]);

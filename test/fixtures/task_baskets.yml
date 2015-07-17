@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  basket_name: MyString
+  description: MyText
+  available: false
+
+two:
+  basket_name: MyString
+  description: MyText
+  available: false

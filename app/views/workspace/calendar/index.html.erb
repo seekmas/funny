@@ -1,0 +1,173 @@
+<div class="grid-container animated fadeIn" style="margin-bottom: 100px;">
+  <div class="p_header">
+    <div class="p_header_hero">
+
+      <table>
+        <tr>
+          <td>
+            <%=image_tag("icons/fairy.png")%>
+          </td>
+          <td>
+            <h1>欢迎来到小日历</h1>
+            <p>小日历是根据你的婚礼任务创建的一个简单明了的婚礼日历，可以根据婚礼的分类和时间，显示你的婚礼任务，让你可以根据日历中的任务时间，选择你优先需要处理的任务， 引导你婚礼筹备的方向，顺利的筹备你的婚礼。</p>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+
+    <div class="p_header_bottom">
+      <div class="grid-60">
+        <p style="color: #18ABE0;font-size: 24px;">快速查看你的婚礼日程
+      </div>
+
+      <div class="grid-40" style="line-height: 110px;">
+
+        <ul class="p_calendar_info">
+          <li class="p_calendar_item">
+            <span class="p_calendar_title">
+              {{ wedding_info.target_date }}
+            </span>
+            <br>
+            <span class="p_calendar_content">结婚日</span>
+          </li>
+
+          <li>
+            <div style="text-align: center;"><%=image_tag("icons/line.png")%></div>
+          </li>
+
+          <li class="p_calendar_item">
+            <span class="p_calendar_title" style="font-size: 20px;">{{ wedding_info.target_date | amDifference : null : 'days' }} 天</span>
+            <br>
+            <span class="p_calendar_content">倒计时</span>
+          </li>
+
+          <li>
+            <div style="text-align: center;"><%=image_tag("icons/line.png")%></div>
+          </li>
+
+          <li class="p_calendar_item">
+            <span class="p_calendar_title"> {{ ( tasks | filter: find_work_done_task ).length  }} / {{ tasks.length }}</span>
+            <br>
+            <span class="p_calendar_content">已完成</span>
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+
+<div id="board" class="p_calendar_container">
+
+  <div class="p_list" cg-busy="{promise:promise_type , message:'正在加载我的任务',backdrop:false,delay:300,minDuration:700}">
+
+
+  <table class="p_calendar">
+    <tr class="p_calendar_title">
+
+      <td>
+        <div style="width: 170px;">
+        2015年分类
+        </div>
+      </td>
+
+      <td  class="p_month" ng-class="{p_today: month == n }" ng-repeat="n in [] | range:month:12">
+        <div style="position: relative;height: 50px;padding: 15px 0 0 20px;" align="center">
+
+          <span ng-show="month == n"><%= image_tag("icons/current_month.png") %></span>
+          {{ n }}月 <i class="icon ion-ios-plus-outline" ng-click="add_task_from(n)"></i>
+        </div>
+      </td>
+
+    </tr>
+
+    <tr ng-repeat="t in types" class="p_calendar_data">
+      <td>
+        <div class="{{ get_border_color(t.id) }} p_calendar_data_title">
+          <span class="p_big_title">
+
+            {{ t.type_name }}
+          </span>
+
+          <span class="p_small_title">
+            {{ (tasks | filter: find_done_task_in_the_type(t)).length }} / {{ (tasks | filter: find_task_in_the_type(t)).length }} （已完成）
+          </span>
+        </div>
+      </td>
+
+      <td ng-class="{p_today: month == n }" ng-repeat="n in [] | range:month:12">
+        <ul>
+
+          <li ng-repeat="task in tasks | filter: find_suitable_task(t.id, n)" data-as-sortable="board.dragControlListeners" data-ng-model="items" data-as-sortable-item>
+
+
+            <div ng-click="finish_task(task)" ng-show="task.work_done == 0" data-as-sortable-item-handle class="{{ get_bg_color(t.id) }} p_task">
+              <%= image_tag("icons/uncheck.png", :class => 'check')%>
+              {{ task.task_title }}
+            </div>
+
+            <div ng-click="unfinish_task(task)" ng-show="task.work_done == 1" data-as-sortable-item-handle class="p_task_checked">
+              <%= image_tag("icons/check.png", :class => 'uncheck')%>
+              {{ task.task_title }}
+            </div>
+
+          </li>
+
+        </ul>
+      </td>
+
+
+    </tr>
+
+  </table>
+</div>
+
+
+<div class="p_form" ng-show="edit_display">
+
+  <%= render "workspace/dashboard/task_field" %>
+
+</div>
+
+</div>
+
+<style>
+.p_month .p_today{
+  padding: 0;
+  margin: 0;
+  width: 170px;
+  border-bottom: 1px solid rgba(155, 155, 155, 0.5);
+}
+.p_month img {
+  position: absolute;
+  top: 0px;
+  left: 2px;
+}
+ul.p_calendar_info {
+  list-style: none;
+}
+
+ul.p_calendar_info li {
+
+  width: 20px;
+  color: #18ABE0;
+  line-height:22px;
+  display: inline-block;
+}
+
+ul.p_calendar_info li.p_calendar_item {
+  width: 120px;
+  text-align: center;
+}
+
+ul.p_calendar_info li.p_calendar_item .p_calendar_title {
+  font-size: 20px;
+}
+
+ul.p_calendar_info li.p_calendar_item .p_calendar_content {
+  font-size: 14px;
+}
+
+</style>

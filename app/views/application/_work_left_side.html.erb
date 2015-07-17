@@ -1,0 +1,46 @@
+<nav id="menu" class="box-panel-project" role="navigation" style="margin-top: 50px;">
+
+  <!-- <div class="box-deliver"></div> -->
+  <!-- <table>
+    <tr>
+      <td><%=image_tag("empty.png")%></td>
+      <td>1个婚礼成员</td>
+      <td><span class="box-yellow">立即邀请</span></td>
+    </tr>
+  </table> -->
+
+  <p align="center">欢迎你, <%= current_user.nickname %></p>
+
+  <table class="nav">
+    <tr>
+      <td width="40px"><%=image_tag("icons/mytask.png")%></td>
+      <td><%= link_to '婚礼任务' , root_path %></td>
+    </tr>
+    <tr>
+      <td><%=image_tag("icons/mycalendar.png")%></td>
+      <td><%=link_to '小日历' , calendar_index_path %></td>
+    </tr>
+    <tr>
+      <td><%=image_tag("icons/logout.png")%></td>
+      <td><%= link_to('退出', destroy_user_session_path, :method => :delete) %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= link_to("抽奖", cheerup_index_path(@work.uuid) )%></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= link_to("拍照活动", cheerup_join_path(@work.uuid) )%></td>
+    </tr>
+
+  </table>
+
+
+</nav>
+
+
+<style>
+.nav a {
+  display: block;
+}
+</style>

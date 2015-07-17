@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_title: MyString
+  task_requirement: MyText
+  expired_at: 2015-06-05 13:17:52
+  user_id: 1
+
+two:
+  task_title: MyString
+  task_requirement: MyText
+  expired_at: 2015-06-05 13:17:52
+  user_id: 1

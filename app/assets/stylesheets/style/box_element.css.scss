@@ -1,0 +1,111 @@
+body {
+    overflow-x: hidden;
+
+}
+a, div, p, span {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 14px;
+}
+
+a {
+	color: #8C989E;
+	font-weight: 400;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #8C989E;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8C989E;
+    text-decoration: none;
+}
+
+a:active {
+    color: #8C989E;
+    text-decoration: none;
+}
+
+label {
+	display: inline;
+	margin-right: 5px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 100;
+}
+
+ul {
+	margin: 0;
+}
+
+textarea {
+    padding: 2px 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #37404E;
+    text-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="password"] {
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    height: 34px;
+    line-height: 34px;
+    margin: 0px;
+    padding: 0px 10px;
+    border: 1px solid #ddd;
+    width: 180px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #37404E;
+    text-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+    color: #8C989E;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #37404E;
+    text-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    width: auto;
+    background: rgba(255,255,255,1);
+    border: 1px solid rgba(230,238,241,1);
+    padding: 0 10px;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    color: #8C989E;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #37404E;
+    text-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    background: rgba(255,255,255,1);
+    border: 1px solid #8C989E;
+}

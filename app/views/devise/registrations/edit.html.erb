@@ -1,0 +1,26 @@
+<div class="box-signin">
+<div class="box-register-title">修改密码</div>
+
+<%= link_to "返回", :back, :class => 'box-find-password' %>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+    <% end %>
+
+    <p><%= f.input :password, :label => false, :placeholder => "新密码", autocomplete: "off", hint: "", required: false %></p>
+
+    <p><%= f.input :password_confirmation, :label => false, :placeholder => "确认新密码", required: false %></p>
+    <p><%= f.input :current_password,:label => false, :placeholder => "旧密码",  hint: "输入当前的密码", required: true %></p>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "更新密码" %>
+  </div>
+<% end %>
+
+
+</div>

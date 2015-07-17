@@ -1,0 +1,116 @@
+<div class="box-title">
+	<h3>添加<%=component.name %></h3>
+</div>
+
+<%=simple_form_for(:implementation, :url => foundation_put_path , :method => :put, :html => { :class => 'uk-form uk-form-horizontal' }) do |f| %>
+	
+	<%=f.input :component_id, :as => :hidden , :input_html => { :value => component.id } %>
+	<% component.gears.each do |gear| %>
+
+	<div class="box-form-row uk-form-row">
+
+	<% if gear.gear_type != nil %>
+		<% type = gear.gear_type.type_value %>
+
+		<% if type == 'select' %>
+
+			<% if gear.select_data == '' or gear.select_data == nil %>
+				<% gear.select_data = '没有数据,' %>
+			<% end %>
+			
+			<label><%= gear.gear_key %></label>
+			
+			<%=f.input "#{gear.gear_key}" , 
+				:collection => gear.select_data.split(",").map { |s| s.to_s } ,
+				:label => false ,
+				:placeholder => "#{gear.gear_key}",
+				:wrapper => false,
+				:input_html => 
+				{ 
+					:id => "gear_#{gear.id}" , 
+					:name => "#{component.class.name}[#{gear.id}]", 
+					:type => type,
+				} 
+			%>
+
+		<% elsif type == 'checkbox' %>
+			
+			<label><%= gear.gear_key %></label>
+			
+			<%=f.input "#{gear.gear_key}" , 
+				:label => false,
+				:wrapper => false,
+				:placeholder => "#{gear.gear_key}",
+				:input_html => 
+				{ 
+					:id => "gear_#{gear.id}" , 
+					:value => 1,
+					:name => "#{component.class.name}[#{gear.id}]", 
+					:type => type ,
+				} 
+			%>
+		
+
+		<% elsif type == 'radio' %>
+
+			<label><%= gear.gear_key %></label>
+			
+			<% gear.select_data.split(",").each do |radio_text| %>
+
+			<label><%="#{radio_text}"%></label>
+			<%=f.input "#{gear.gear_key}" , 
+				:label => false ,
+				:wrapper => false,
+				:placeholder => "#{gear.gear_key}",
+				:wrapper => false,
+				:input_html => 
+				{ 
+					:id => "gear_#{gear.id}" , 
+					:name => "#{component.class.name}[#{gear.id}]", 
+					:type => type,
+					:value => "#{radio_text}",
+				} 
+			%>
+
+			<% end %>
+
+		<% elsif type =='textarea' %>
+			<%=f.text_area "#{gear.gear_key}" , 
+			  :label => false ,
+			  :placeholder => "#{gear.gear_key}",
+			  :wrapper => false,
+
+				:input_html => 
+				{ 
+					:id => "gear_#{gear.id}" , 
+					:name => "#{component.class.name}[#{gear.id}]", 
+					:type => type ,
+					:class => "label_better"
+				} 
+			%>
+
+		<% else %>
+			
+			<%=f.input "#{gear.gear_key}" , 
+			  :label => false ,
+			  :placeholder => "#{gear.gear_key}",
+			  :wrapper => false,
+				:input_html => 
+				{ 
+					:id => "gear_#{gear.id}" , 
+					:name => "#{component.class.name}[#{gear.id}]", 
+					:type => type ,
+					:class => "label_better"
+				} 
+			%>
+		<% end %>
+	<% end %>
+	</div>
+	<% end %>	
+
+	<div class="box-form-row uk-form-row">
+		<label>操作</label>
+		<%=f.button :submit, "添加 / 更新", :class => 'uk-button' %>
+	</div>
+
+<% end %>

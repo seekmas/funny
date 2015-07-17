@@ -1,0 +1,62 @@
+<nav id="menu" class="box-panel ps-container" role="navigation">
+
+		<div align="center"><%=image_tag('avatar.png', :class => 'box-avatar')%></div>
+
+		<table class="box-menu-table-vertical">
+	  	<% if current_user %>
+	  	<tr>
+	  		<td style="width: 50px;"><%= link_to('注销', destroy_user_session_path, :method => :delete ) %></td>
+	    	<td style="width: 50px;"><%= link_to('修改密码', edit_registration_path(:user)) %></td>
+	    </tr>
+	  	<% else %>
+	    <tr>
+	    	<td><%= link_to('注册', new_registration_path(:user)) %></td>
+	    	<td><%= link_to('登陆', new_session_path(:user)) %></td>
+	    </tr>
+	   	<% end %>	
+	  </table>
+
+	 	<script>
+		$(function(){
+			$('.box-calendar').on('click', function(){
+				$('#datetimepicker').trigger('focus');
+			});
+			
+			$('#datetimepicker').on('change', function(){
+				var date = $(this).val();
+				$.ajax({
+					url: '<%=set_project_date_path%>',
+					method: 'post',
+					data: {
+						date: date
+					},
+					success: function(){
+						window.location.reload();
+					}
+				});
+			})
+		});
+		</script>
+  	<span class="box-calendar">
+
+  		<div class="box-title">婚礼倒计时</div>
+
+  		<input id="datetimepicker" class="box-datetimepicker" type="text" value="<%=@project.project_date.strftime('%Y.%m.%d')%>" placeholder="<%=@project.project_date.strftime('%Y.%m.%d')%>" readonly="readonly" />
+			<h3><%=Time.diff(@now,@project.project_date,"%d")[:diff] %></h3>
+		</span>
+
+
+
+		<table class="box-menu-table">
+			<tr>
+				<td><div class="box-wedding-note"></div></td>
+				<td><a href="<%=root_path%>">婚礼任务</a></td>
+			</tr>
+			
+<!-- 			<tr>
+				<td><div class="box-wedding-daily"></div></td>
+				<td><a href="#">记账本</a></td>
+			</tr> -->
+
+		</table>
+</nav>

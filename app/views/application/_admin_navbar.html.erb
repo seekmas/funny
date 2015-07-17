@@ -1,0 +1,37 @@
+<nav class="uk-navbar">
+    <ul class="uk-navbar-nav">
+        <li class="uk-parent" data-uk-dropdown="">
+            <a href="#">表单</a>
+            <div style="" class="uk-dropdown uk-dropdown-navbar">
+                <ul class="uk-nav uk-nav-navbar">
+                    <li><a href="<%=design_default_index_path%>">表单设计</a></li>
+                    <li><a href="<%=design_default_struct_path%>">表单汇总</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="uk-parent" data-uk-dropdown="">
+            <a href="">表单管理</a>
+
+            <div style="" class="uk-dropdown uk-dropdown-navbar">
+                <ul class="uk-nav uk-nav-navbar">
+                    <% @components.each do |c| %>
+                    <li><a href="<%=design_default_form_get_path(c.id)%>"><%=c.name%></a></li>
+                    <% end %>
+                </ul>
+            </div>
+        </li>
+
+        <li class="uk-parent" data-uk-dropdown="">
+            <a href="#">任务</a>
+            <div style="" class="uk-dropdown uk-dropdown-navbar">
+                <ul class="uk-nav uk-nav-navbar">
+                    <li><a href="<%=task_index_path%>">添加任务</a></li>
+                    <li><a href="<%=task_type_path%>">添加类型</a></li>
+                    <li><a href="<%=task_struct_path%>">任务汇总</a></li>
+                </ul>
+            </div>
+        </li>
+
+    </ul>
+</nav>

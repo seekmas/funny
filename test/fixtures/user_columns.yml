@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  column_value: MyString
+  gear_id: 1
+  row_id: 1
+
+two:
+  column_value: MyString
+  gear_id: 1
+  row_id: 1

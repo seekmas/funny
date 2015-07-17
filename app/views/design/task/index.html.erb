@@ -1,0 +1,26 @@
+<h2>添加任务功能</h2>
+<%=simple_form_for(@task_catalog, :url => '', :method => :put , :html => { :class => 'uk-form uk-form-stacked' }) do |f|%>
+		
+	<div class="uk-form-row">
+		<%=f.input :catalog_name, :placeholder => '任务阶段', :label => false, :wrapper_html => false %>
+	</div>
+
+	<div class="uk-form-row">
+		<label>是否可用?</label>
+		<%=f.input :available, :label => false, :wrapper_html => false%>
+	</div>
+
+	<hr/>
+
+	<div class="uk-placeholder-large" id="tasks">
+		<%=f.simple_fields_for :tasks do |task| %>
+					<%=render 'task_fields', :f => task %>
+		<% end %>
+		<%=link_to_add_association '添加字段', f, :tasks %>
+	</div>
+	
+	<div class="uk-placeholder-large"> 
+		<%=f.button :submit, "创建任务模板", :class => 'uk-button' %>
+	<div>
+
+<% end %>

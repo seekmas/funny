@@ -1,0 +1,29 @@
+<h2>添加任务类型</h2>
+<%=simple_form_for(@task_type, :url => task_type_put_path , :method => :put , :html => { :class => 'uk-form uk-form-stacked' }) do |f|%>
+	<div class="uk-form-row">
+		<%=f.input :type_name %>
+	</div>
+
+	<div class="uk-form-row">
+		<%=f.button :submit %>
+	</div>
+
+<% end %>
+
+<table class="uk-table uk-table-striped">
+	<tr>
+		<td>任务类型</td>
+		<td>ICON</td>
+		<td>操作</td>
+	</tr>
+<% @task_types.each do |type| %>
+	<tr>
+		<td><%=type.type_name %></td>
+		<td><%=type.task_icon %></td>
+		<td>
+			<%=link_to 'Edit' , edit_task_type_put_path(type.id) %>
+		</td>
+	</tr>
+
+<% end %>
+</table>

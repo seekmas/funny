@@ -1,0 +1,13 @@
+<%= simple_form_for(@invite_letter) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :user_id %>
+    <%= f.input :email_list %>
+    <%= f.input :email_content %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

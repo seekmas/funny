@@ -1,0 +1,85 @@
+
+<div class="box-register">
+
+	<a class="box-login-first" href="<%=new_user_session_path%>">已有账号?立即登录</a>
+
+	<div class="box-register-title">注册</div>
+
+	<%=notice%>
+
+	<%=simple_form_for(:user, :url => '', :method => :post) do |f|%>
+		
+			<p>
+				<%=f.input :username, :placeholder => '手机号', :label => false, :wrapper => false, :input_html => { :value => flash[:phone] }  %>
+				<% if flash[:username_has_been_taken] %>
+				<span id="username_has_been_taken"><%=flash[:username_has_been_taken]%></span>
+				<% end %>
+			</p>
+
+<!-- 			<div class="grid-container">
+				<div class="grid-50">
+					<%=f.input :validate_code, :placeholder => "验证码" ,:label => false, :required => false , :wrapper => false   %>
+					<% if flash[:code_is_failed] %><span id="code_is_failed">验证码错误</span><% end %>
+
+				</div>
+				<div class="grid-50" align="center">
+					<div>
+						<%=link_to '发送验证', '#', :class => 'box-send' %>
+						<span id="ajax_response"></span>
+					</div>
+				</div>
+			</div>
+ -->
+			<p>
+				<%=f.input :password, :placeholder => '密码', :label => false, :wrapper => false, :input_html => { :value => flash[:password] }  %>
+				<% if flash[:password_is_too_short] %>
+					<span id="password_is_too_short">
+						<%= flash[:password_is_too_short]%>
+					</span>
+				<% end %>
+			</p>
+
+			<p align="center"><%=link_to '注册', '#', :class => 'box-submit'  %></p>
+
+	<% end %>
+
+</div>
+
+
+<script>
+$(function(){
+	$('.box-send').on('click', function(e){
+		e.preventDefault();
+		$.ajax({
+			url: '<%=user_send_sms_path%>',
+			data: {
+				phone: $('#user_username').val(),
+				password: $('#user_password').val()
+			},
+			method: 'post',
+			success: function(data){
+				$('#ajax_response').text(data.response);
+			}
+		})
+	});
+
+	$('.box-submit').on('click', function(e){
+		e.preventDefault();
+		$('form').submit();
+	});
+});
+</script>
+
+<style>
+.box-submit,
+.box-submit:hover {
+	text-decoration: none;
+	padding: 2px 40px;
+	color: #F9FCFD;
+	font-size: 21px;
+	margin-top: 26px;
+	height: 50px;
+	background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%;
+	border: 1px solid #FFF;
+}
+</style>

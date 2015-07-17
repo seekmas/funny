@@ -1,0 +1,17 @@
+<h2>更新任务分类</h2>
+
+<%=simple_form_for(@task_type, :url => '', :method => :put) do |f|%>
+	
+	<div class="uk-form-row">
+		<%=f.input :type_name %>
+	</div>
+
+	<div class="uk-form-row">
+		<%=f.input :task_icon %>
+	</div>
+
+	<div class="uk-form-row">
+		<%=f.button :submit %>
+	</div>
+
+<% end %>

@@ -1,0 +1,332 @@
+<div class="grid-100">
+<nav class="box-sub-nav hide-on-mobile">
+	<ul>		
+		<li>
+			<%=link_to '筹备阶段 <i class="fa fa-angle-double-down"></i>'.html_safe, '#', :class => 'box-dropdown-menu' %>
+			<div class="box-dropdown">
+				<ul>
+					<% @task_catalogs.each do |catalog| %>
+					<li><%=link_to "#{catalog.catalog_name}", sort_by_time_path(catalog.internal_id), :class => 'pjax'  %></li>
+					<% end %>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+</div>
+
+
+<h2 class="box-timeline-title" align="center">
+	<% if @task_catalog != nil %><%=@task_catalog.catalog_name%><% end %>
+</h2>
+
+<div id="block" class="box-timeline" style="border-bottom: 1px solid #ddd;">
+
+
+	<div class="box-timeline-title"></div>
+	<div class="box-spine hide-on-mobile"></div>
+	
+	<div class="grid-100">
+		<div class="grid-50 hide-on-mobile box-mirror" style="height: 50px;">
+			<div class="box-dot-start"></div>
+		</div>
+		<div class="grid-50 hide-on-mobile box-mirror" style="height: 50px;">
+		</div>
+	</div>
+
+	<% if @task_catalog != nil %>
+	<% @task_catalog.user_tasks.each_with_index do |task, index| %>
+
+	<% if (index+1)%2 == 0 %>
+	<div class="grid-50 hide-on-mobile box-mirror">
+
+		<div class="box-left">
+			<% if (index+1)%2 == 0 %>
+				<div class="box-dot hide-on-mobile">
+				</div>
+				
+				<% if task.done == true %>
+					<div class="box-done hide-on-mobile"></div>
+				<% else %>
+				<div class="box-not-yet hide-on-mobile"></div>
+				<% end %>
+
+
+			<% end %>
+		
+			<div class="box-timeline-container">
+			<div class="box-mission"></div>
+			</div>
+		</div>
+
+	</div>
+	<% end %>
+
+	<div id="<%="goto_#{task.id}"%>" class="grid-50 mobile-grid-100">
+
+		<div class="<% if (index+1)%2 == 1 %>box-left<% else %>box-right<% end %>">
+
+			<div class="box-date"><% if task.expired_at %><%=task.expired_at.strftime("%Y.%m.%d")%><% else %>日期未定<% end %></div>
+		
+		<% if (index+1)%2 == 1 %>
+		<div class="box-dot hide-on-mobile">
+		</div>
+				<% if task.done %>
+					<div class="box-done hide-on-mobile"></div>
+				<% else %>
+				<div class="box-not-yet hide-on-mobile"></div>
+				<% end %>
+		<% end %>
+		
+		<div class="box-timeline-container">
+			<div class="box-mission animated bounceIn">
+
+				<a class="box-check-task" data-id="<%=task.id%>" href="#">
+					<div class="box-mission-date">
+						<span class="box-mission-deadline">
+							<span class="box-hourglass"></span>
+						</span>
+						
+						<span class="box-mission-deadline">
+						<% if task.expired_at %>
+							<%= Time.diff(task.expired_at, DateTime.now,"%d")[:diff]%>
+						<% else %>
+							0 天
+						<% end %>
+						</span>
+						
+						<% if task.done == true %>
+							<span class="box-mission-check"></span>
+						<% else %>
+							<span class="box-mission-not-check"></span>
+						<% end %>	
+					</div>
+				</a>
+
+				<a class="box-mission-edit" href="#">
+				<div class="box-mission-desc">
+					<div class="box-mission-title">
+						<div class="box-mission-link">
+							<%=task.task_title %>
+						</div>
+					</div>
+				</div>
+				</a>
+
+<!-- 				<% if (index+1)%2 == 0 %>
+				<a class="box-check-task" data-id="<%=task.id%>" href="#">
+					<div class="box-mission-date">
+						<span class="box-mission-deadline">
+							<span class="box-hourglass"></span>
+						</span>
+
+						<span class="box-mission-deadline">
+						<% if task.expired_at %>
+							<%= Time.diff(task.expired_at, DateTime.now,"%d")[:diff]%>
+						<% else %>
+							0 天
+						<% end %>
+						</span>
+
+						<% if task.done == true %>
+							<span class="box-mission-check"></span>
+						<% else %>
+							<span class="box-mission-not-check"></span>
+						<% end %>	
+					</div>
+				</a>
+				<% end %> -->
+
+			</div>
+		</div>
+
+		<div class="box-mission-edit-side <% if (index+1)%2 == 1 %>box-mission-edit-left-side<% else %>box-mission-edit-right-side<% end %>">
+			<%=simple_form_for(task, :url => submit_task_path(:format => :json), :method => :post) do |f|%>
+				<%=f.input :id, :as => :hidden %>
+				<div class="box-edit-row">
+					<%=f.input :expired_at, :placeholder => "任务日期", :as => :string , :label => false, :wrapper => false, :input_html => { :class => "box-datetimepicker" } %>
+				</div>
+
+				<div class="box-edit-row">
+					<%=f.input :task_title, :placeholder => "任务名称", :label => false, :wrapper => false %>
+				</div>
+
+				<div class="box-edit-row">
+					<%=f.input :task_requirement, :placeholder => "备注", :label => false, :wrapper => false %>
+				</div>
+
+				<div class="box-edit-row">
+					<%=f.button :submit , "修改" , :class => 'box-edit-submit' %>
+				</div>
+
+			<% end %>
+		</div>
+
+		</div>
+	</div>
+
+	<% if (index+1)%2 == 1 %>
+	<div class="grid-50 hide-on-mobile box-mirror">
+		<div class="box-timeline-container">
+			<div class="box-mission"></div>
+		</div>
+	</div>
+	<% end %>
+
+	<% end %>
+	<% end %>
+
+	<div class="grid-100">
+		<div class="grid-50 hide-on-mobile box-mirror" style="height: 50px;">
+			<div class="box-dot-end"></div>
+		</div>
+		<div class="grid-50 hide-on-mobile box-mirror" style="height: 50px;">
+		</div>
+	</div>
+	</div>
+
+</div>
+
+<p align="center"><a class="box-next-stage" href="<%=sort_by_time_path(@task_catalog.internal_id + 1)%>">下一阶段</a></p>
+
+<style>
+#block {
+	box-sizing: border-box;
+	display: block;
+	position: relative;;
+	overflow: hidden;
+	padding-bottom: 260px;
+}
+
+.box-edit-submit,
+.box-edit-submit:hover {
+	width: 100% !important;
+	background: rgba(213, 43, 84, 1) !important;
+	border: 1px solid #fff;
+	color: #fff !important;
+}
+</style>
+<script>
+$(function(){
+
+	$('form').on('submit', function(e){
+
+		$box_title = $(this).parent().parent().find('.box-mission-link');
+		$box_date = $(this).parent().parent().find('.box-date');
+
+
+		e.preventDefault();
+		var action = $(this).attr('action');
+		var method = $(this).attr('method');
+		var dict = {}
+
+		$(this).find('input,textarea').each(function(index,obj){
+			var name = $(obj).attr('name');
+			var value = $(obj).val();
+			dict[name] = value
+		});
+
+		$.ajax({
+			url: action,
+			method: method,
+			data: dict,
+			success: function(data){
+				
+				$box_title.text(data.task.task_title);
+				$box_date.text(data.task.expired_at_format);
+				$('.box-mission-edit-side').hide('slow');
+			}
+		})
+		
+		
+	});
+
+	$('.box-mission-edit-side').hide();
+	$('.box-mission-edit').on('click', function(e){
+		e.preventDefault();
+		$('.box-mission-edit-side').hide();
+		$(this).parent().parent().parent().find('.box-mission-edit-side').show();
+
+	});
+
+	$(document).bind('click', function(e){
+		var tag_name = $(e.target).prop('tagName');
+
+		if( $(e.target).attr('class') != 'box-mission-link' && ($.inArray(tag_name , ['FORM','TEXTAREA','INPUT']) < 0) )
+		{	
+			$('.box-mission-edit-side').hide('slow');
+		}
+	});
+
+	$(document).bind('click', function(e){
+		if($(e.target).attr('class') != 'box-dropdown-menu')
+		{
+			$('.box-dropdown').removeClass('box-dropdown-display')
+		}
+	});
+
+	$('.box-sub-nav > ul > li > a').on('click', function(e){
+		e.preventDefault();
+		var $dropdown = $(this).parent().find('.box-dropdown');
+		if(/box\-dropdown\-display/.test($dropdown.attr('class')) == true){
+			$dropdown.removeClass('box-dropdown-display')
+		}else{
+			$('.box-dropdown').removeClass('box-dropdown-display')
+			$dropdown.addClass('box-dropdown-display')
+		}
+	});
+
+	
+	var line_height = $('.box-dot-end').offset().top - $('.box-dot-start').offset().top;
+
+	console.log($('.box-dot-end').offset().top, $('.box-dot-start').offset().top)
+
+	$('.box-spine').attr({ style: 'height: '+line_height+'px' });
+
+	$('div:not(.box-mirror).grid-50').each(function(){
+		
+		var height = $(this).height();
+		$(this).parent().find('.box-mirror').attr({ "height": height+'px' });
+	});
+
+	$('.box-mission-check').hide();
+	$('.box-mission-not-check').hide();
+	$('.box-timeline-container').on('mouseover', function(){
+		$(this).find('.box-mission-deadline').hide();
+		$(this).find('.box-mission-check').show();
+		$(this).find('.box-mission-not-check').show();
+	}).on('mouseout', function(){
+		$(this).find('.box-mission-deadline').show();
+		$(this).find('.box-mission-check').hide();
+		$(this).find('.box-mission-not-check').hide();
+	});
+
+});
+
+$('.box-check-task').on('click', function(e){
+	$target = $(this);
+	e.preventDefault();
+	var id = $(this).attr('data-id');
+	$.ajax({
+		url: '<%=check_task_status_path%>',
+		method: 'post',
+		data: {
+			id: id
+		},
+		success: function(data){
+			if($check = $target.find('.box-mission-not-check'))
+			{
+				$check.attr({"class": "box-mission-check"});
+				console.log($check);
+			}
+		}
+	});
+});
+
+$(window).load(function() {
+	$('.box-timeline').masonry({
+	  // options
+	  itemSelector: '.grid-50',
+	});
+});
+</script>

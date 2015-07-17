@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>婚格 | 让结婚更简单</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="box-wrap">
+	<%= render 'left_bar' %>
+
+	<div class="grid-container box-main">
+
+		<nav class="box-nav">
+
+			<ul>
+				<li class="box-nav-logo"><%=link_to image_tag('logo.png'), root_path %></li>
+			</ul>
+
+			<div class="box-clear"></div>
+
+		</nav>
+
+		<div class="grid-100">
+			<div  id="main-content">
+				<%= yield %>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>

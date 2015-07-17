@@ -1,0 +1,29 @@
+<h3>Task List</h3>
+<table class="uk-table uk-table-striped">
+
+<% @task_catalogs.each do |catalog| %>
+<tr>
+		<td>
+		<%=catalog.catalog_name %>
+		<%=link_to 'Edit' , task_edit_path(catalog.id) %>
+
+		<%=link_to 'Delete', delete_task_catalog_path(catalog.id)%>
+		</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+</tr>
+
+	<% catalog.tasks.each do |task| %>
+	<tr>
+		<td></td>
+		<td><%=task.task_title%></td>
+		<td><%=task.task_requirement%></td>
+		<td><%=task.before_task_days%></td>
+		<td><%=link_to 'Delete', delete_task_item_path(task.id)%></td>
+	</tr>
+	<% end %>
+
+<% end %>
+</table>

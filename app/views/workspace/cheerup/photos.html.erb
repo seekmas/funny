@@ -1,0 +1,87 @@
+<div class="page" ng-controller="AppController">
+  <div class="top_nav">
+    <%=image_tag("icons/logo_home.png")%>
+  </div>
+  <div class="hero">
+    <%=link_to image_tag("hero.png") , '' %>
+  </div>
+</div>
+
+<ul id="vertical">
+<% @work_galleries.each do |gallery| %>
+	<% if gallery.photo_file_size %>
+    <li data-thumb="<%=gallery.photo.url(:medium)%>" data-src="<%=gallery.photo.url(:small)%>">
+        <p class="photo" align="center"><%= image_tag(gallery.photo.url(:medium)) %></p>
+        <p style="text-align: center;color: #F06199">
+          分享来自: <%=gallery.phone.gsub!( gallery.phone[3..6], '****' )%>
+        </p>
+    </li>
+	<% end %>
+<% end %>
+</ul>
+
+<p align="right" style="padding:0 40px;"><%= link_to("返回分享", cheerup_join_path(@work.uuid) ) %></p>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+			$('#vertical').lightSlider({
+	      gallery:true,
+	      item:1,
+	      vertical:true,
+	      verticalHeight: 360,
+	      vThumbWidth: 30,
+	      thumbItem: 8,
+	      thumbMargin: 5,
+	      slideMargin: 10
+	    });
+    });
+</script>
+
+<style>
+a,
+a:active,
+a:hover,
+a:visited {
+    color: #8C989E;
+    font-weight: 400;
+		font-size: 14px;
+		text-decoration: none;
+}
+
+#vertical {
+		margin-top: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.lSGallery {
+  padding-top: 20px;
+}
+
+#vertical li {
+
+}
+
+#vertical li img {
+  margin: 0;
+	border: 2px solid #eee;
+	box-shadow: 0 0 10px #eee;
+}
+
+.page {
+  padding: 0 10px;
+}
+
+.top_nav {
+  width: 100%;
+}
+
+.hero {
+  margin-top: 20px;
+  text-align: center;
+}
+
+</style>

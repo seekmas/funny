@@ -1,0 +1,51 @@
+@import "unsemantic/assets/sass/unsemantic-grid-responsive.scss";
+@import "style/normalize.css.scss";
+@import "jquery.datetimepicker.css.scss";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "style/box_element.css.scss";
+@import "style/box_theme.css.scss";
+@import "style/box_nav.css.scss";
+@import "ionic";
+@import "angular-busy/dist/angular-busy";
+@import "work/project.css.scss";
+@import "perfect-scrollbar/css/perfect-scrollbar";
+@import "ng-sortable/dist/ng-sortable";
+@import "animate.css/animate";
+@import "angular-multi-select/src/angular-multi-select";
+@import "sweetalert/dist/sweetalert";
+
+* {
+	box-sizing: border-box;
+	font-smoothing: antialiased;
+	font-family: "Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif !important;
+}
+
+body {
+	height: auto;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.box-header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #F06199;
+  z-index: 999;
+  height: 50px;
+}
+
+.box_logo {
+  margin: 12px 0 0 30px;;
+  height: 25px;
+}
+
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+    background-color: #F06199;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="project" angular-multi-select-mouse-trap angular-multi-select-key-trap>
+<head>
+  <title>婚格 | 让结婚更简单</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= stylesheet_link_tag    'work', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'work', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body  ng-controller="ProjectController">
+
+<div class="box-header-bar">
+  <%= render "work_header_bar" %>
+</div>
+
+<div class="box-wrap" style="margin-top: 50px;">
+	<%= render "work_left_side" %>
+
+	<div class="{{ main_style }}">
+		<div  id="main-content">
+			<%= yield %>
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+@import "uikit/css/uikit.almost-flat.min";
+@import "uikit/css/uikit.min";
+@import "style/box_selectable";
+@import "style/box_element";
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/assets/fontawesome-webfont.eot");
+  src: url("/assets/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), 
+  		 url("/assets/fontawesome-webfont.woff2") format('woff2'), 
+  		 url("/assets/fontawesome-webfont.woff") format("woff"), 
+  		 url("/assets/fontawesome-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hidden {
+	display: none;
+}
+
+.nested-fields {
+	margin-top: 25px;
+}

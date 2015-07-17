@@ -1,0 +1,2062 @@
+2015-06-02 14:58:07 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-02 14:58:07 1788 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-02 14:58:07 1788 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-02 14:58:07 1788 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-02 14:58:07 1788 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-02 14:58:07 1788 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-02 14:58:07 1788 [Note] InnoDB: Memory barrier is not used
+2015-06-02 14:58:07 1788 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-02 14:58:07 1788 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-02 14:58:07 1788 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-02 14:58:07 1788 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-02 14:58:07 1788 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-02 14:58:07 1788 [Note] InnoDB: The log sequence numbers 23868557 and 23868557 in ibdata files do not match the log sequence number 24028656 in the ib_logfiles!
+2015-06-02 14:58:07 1788 [Note] InnoDB: Database was not shutdown normally!
+2015-06-02 14:58:07 1788 [Note] InnoDB: Starting crash recovery.
+2015-06-02 14:58:07 1788 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2015-06-02 14:58:08 1788 [Note] InnoDB: Restoring possible half-written data pages 
+2015-06-02 14:58:08 1788 [Note] InnoDB: from the doublewrite buffer...
+2015-06-02 14:58:09 1788 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-02 14:58:09 1788 [Note] InnoDB: Waiting for purge to start
+2015-06-02 14:58:09 1788 [Note] InnoDB: 5.6.23 started; log sequence number 24028656
+2015-06-02 14:58:09 1788 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-02 14:58:09 1788 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-02 14:58:09 1788 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-02 14:58:09 1788 [Note] IPv6 is available.
+2015-06-02 14:58:09 1788 [Note]   - '::' resolves to '::';
+2015-06-02 14:58:09 1788 [Note] Server socket created on IP: '::'.
+2015-06-02 14:58:09 1788 [Note] Event Scheduler: Loaded 0 events
+2015-06-02 14:58:09 1788 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-02 17:24:40 1788 [Note] mysqld: Normal shutdown
+
+2015-06-02 17:24:40 1788 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-02 17:24:40 1788 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-02 17:24:40 1788 [Note] Shutting down slave threads
+2015-06-02 17:24:40 1788 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-02 17:24:40 1788 [Note] Binlog end
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'partition'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-02 17:24:40 1788 [Note] Shutting down plugin 'InnoDB'
+2015-06-02 17:24:40 1788 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-02 17:24:40 1788 [Note] InnoDB: Starting shutdown...
+2015-06-02 17:24:41 1788 [Note] InnoDB: Shutdown completed; log sequence number 24163317
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'MyISAM'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'MEMORY'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'CSV'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'sha256_password'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-02 17:24:41 1788 [Note] Shutting down plugin 'binlog'
+2015-06-02 17:24:41 1788 [Note] mysqld: Shutdown complete
+
+2015-06-06 20:40:01 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-06 20:40:01 6640 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-06 20:40:01 6640 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-06 20:40:01 6640 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-06 20:40:01 6640 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-06 20:40:01 6640 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-06 20:40:01 6640 [Note] InnoDB: Memory barrier is not used
+2015-06-06 20:40:01 6640 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-06 20:40:01 6640 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-06 20:40:01 6640 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-06 20:40:01 6640 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-06 20:40:01 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:01 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:01 6640 [Note] InnoDB: Retrying to lock the first data file
+2015-06-06 20:40:02 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:02 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:03 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:03 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:04 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:04 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:05 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:05 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:06 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:06 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:07 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:07 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:08 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:08 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:09 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:09 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:10 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:10 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:11 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:11 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:12 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:12 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:13 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:13 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:14 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:14 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:15 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:15 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:16 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:16 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:17 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:17 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:18 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:18 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:19 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:19 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:20 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:20 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:21 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:21 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:22 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:22 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:23 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:23 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:24 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:24 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:25 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:25 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:26 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:26 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:27 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:27 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:28 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:28 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:29 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:29 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:30 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:30 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:31 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:31 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:32 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:32 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:33 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:33 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:34 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:34 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:35 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:35 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:36 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:36 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:37 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:37 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:38 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:38 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:39 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:39 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:40 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:40 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:41 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:41 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:42 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:42 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:43 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:43 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:44 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:44 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:45 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:45 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:46 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:46 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:47 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:47 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:48 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:48 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:49 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:49 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:50 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:50 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:51 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:51 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:52 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:52 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:53 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:53 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:54 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:54 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:55 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:55 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:56 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:56 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:57 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:57 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:58 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:58 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:40:59 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:40:59 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:00 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:00 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:01 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:01 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:02 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:02 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:03 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:03 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:04 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:04 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:05 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:05 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:06 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:06 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:07 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:07 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:08 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:08 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:09 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:09 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:10 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:10 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:11 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:11 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:12 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:12 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:13 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:13 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:14 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:14 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:15 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:15 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:16 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:16 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:17 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:17 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:18 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:18 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:19 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:19 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:20 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:20 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:21 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:21 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:22 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:22 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:23 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:23 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:24 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:24 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:25 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:25 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:26 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:26 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:27 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:27 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:28 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:28 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:29 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:29 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:30 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:30 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:31 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:31 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:32 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:32 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:33 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:33 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:34 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:34 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:35 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:35 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:36 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:36 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:37 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:37 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:38 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:38 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:39 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:39 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:40 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:40 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:41 6640 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-06 20:41:41 6640 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-06 20:41:41 6640 [Note] InnoDB: Unable to open the first data file
+2015-06-06 20:41:41 7fff7de6c300  InnoDB: Operating system error number 35 in a file operation.
+InnoDB: Error number 35 means 'Resource temporarily unavailable'.
+InnoDB: Some operating system error numbers are described at
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/operating-system-error-codes.html
+2015-06-06 20:41:41 6640 [ERROR] InnoDB: Can't open './ibdata1'
+2015-06-06 20:41:41 6640 [ERROR] InnoDB: Could not open or create the system tablespace. If you tried to add new data files to the system tablespace, and it failed here, you should now edit innodb_data_file_path in my.cnf back to what it was, and remove the new ibdata files InnoDB created in this failed attempt. InnoDB only wrote those files full of zeros, but did not yet use them in any way. But be careful: do not remove old data files which contain your precious data!
+2015-06-06 20:41:41 6640 [ERROR] Plugin 'InnoDB' init function returned error.
+2015-06-06 20:41:41 6640 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2015-06-06 20:41:41 6640 [ERROR] Unknown/unsupported storage engine: InnoDB
+2015-06-06 20:41:41 6640 [ERROR] Aborting
+
+2015-06-06 20:41:41 6640 [Note] Binlog end
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'partition'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'MyISAM'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'MEMORY'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'CSV'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'sha256_password'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-06 20:41:41 6640 [Note] Shutting down plugin 'binlog'
+2015-06-06 20:41:41 6640 [Note] mysqld: Shutdown complete
+
+2015-06-07 16:45:50 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-07 16:45:50 452 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-07 16:45:50 452 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-07 16:45:50 452 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-07 16:45:50 452 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-07 16:45:50 452 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-07 16:45:50 452 [Note] InnoDB: Memory barrier is not used
+2015-06-07 16:45:50 452 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-07 16:45:50 452 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-07 16:45:50 452 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-07 16:45:50 452 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-07 16:45:50 452 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-07 16:45:51 452 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-07 16:45:51 452 [Note] InnoDB: Waiting for purge to start
+2015-06-07 16:45:51 452 [Note] InnoDB: 5.6.23 started; log sequence number 24543887
+2015-06-07 16:45:51 452 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-07 16:45:51 452 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-07 16:45:51 452 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-07 16:45:51 452 [Note] IPv6 is available.
+2015-06-07 16:45:51 452 [Note]   - '::' resolves to '::';
+2015-06-07 16:45:51 452 [Note] Server socket created on IP: '::'.
+2015-06-07 16:45:51 452 [Note] Event Scheduler: Loaded 0 events
+2015-06-07 16:45:51 452 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-07 19:04:05 452 [Note] mysqld: Normal shutdown
+
+2015-06-07 19:04:05 452 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-07 19:04:05 452 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-07 19:04:05 452 [Note] Shutting down slave threads
+2015-06-07 19:04:05 452 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-07 19:04:05 452 [Note] Binlog end
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'partition'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-07 19:04:05 452 [Note] Shutting down plugin 'InnoDB'
+2015-06-07 19:04:05 452 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-07 19:04:05 452 [Note] InnoDB: Starting shutdown...
+2015-06-07 19:04:07 452 [Note] InnoDB: Shutdown completed; log sequence number 24543907
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'MyISAM'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'MEMORY'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'CSV'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'sha256_password'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-07 19:04:07 452 [Note] Shutting down plugin 'binlog'
+2015-06-07 19:04:07 452 [Note] mysqld: Shutdown complete
+
+2015-06-10 12:13:12 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-10 12:13:12 550 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-10 12:13:12 550 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-10 12:13:12 550 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-10 12:13:12 550 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-10 12:13:12 550 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-10 12:13:12 550 [Note] InnoDB: Memory barrier is not used
+2015-06-10 12:13:12 550 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-10 12:13:12 550 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-10 12:13:12 550 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-10 12:13:12 550 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-10 12:13:12 550 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-10 12:13:12 550 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-10 12:13:12 550 [Note] InnoDB: Waiting for purge to start
+2015-06-10 12:13:12 550 [Note] InnoDB: 5.6.23 started; log sequence number 24599854
+2015-06-10 12:13:12 550 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-10 12:13:12 550 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-10 12:13:12 550 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-10 12:13:12 550 [Note] IPv6 is available.
+2015-06-10 12:13:12 550 [Note]   - '::' resolves to '::';
+2015-06-10 12:13:12 550 [Note] Server socket created on IP: '::'.
+2015-06-10 12:13:13 550 [Note] Event Scheduler: Loaded 0 events
+2015-06-10 12:13:13 550 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-10 14:09:29 550 [Note] mysqld: Normal shutdown
+
+2015-06-10 14:09:29 550 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-10 14:09:29 550 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-10 14:09:29 550 [Note] Shutting down slave threads
+2015-06-10 14:09:29 550 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-10 14:09:29 550 [Note] Binlog end
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'partition'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-10 14:09:29 550 [Note] Shutting down plugin 'InnoDB'
+2015-06-10 14:09:29 550 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-10 14:09:29 550 [Note] InnoDB: Starting shutdown...
+2015-06-10 14:09:30 550 [Note] InnoDB: Shutdown completed; log sequence number 24631263
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'MyISAM'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'MEMORY'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'CSV'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'sha256_password'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-10 14:09:30 550 [Note] Shutting down plugin 'binlog'
+2015-06-10 14:09:30 550 [Note] mysqld: Shutdown complete
+
+2015-06-10 15:26:03 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-10 15:26:03 635 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-10 15:26:03 635 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-10 15:26:03 635 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-10 15:26:03 635 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-10 15:26:03 635 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-10 15:26:03 635 [Note] InnoDB: Memory barrier is not used
+2015-06-10 15:26:03 635 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-10 15:26:03 635 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-10 15:26:03 635 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-10 15:26:03 635 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-10 15:26:03 635 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-10 15:26:03 635 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-10 15:26:03 635 [Note] InnoDB: Waiting for purge to start
+2015-06-10 15:26:04 635 [Note] InnoDB: 5.6.23 started; log sequence number 24631263
+2015-06-10 15:26:04 635 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-10 15:26:04 635 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-10 15:26:04 635 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-10 15:26:04 635 [Note] IPv6 is available.
+2015-06-10 15:26:04 635 [Note]   - '::' resolves to '::';
+2015-06-10 15:26:04 635 [Note] Server socket created on IP: '::'.
+2015-06-10 15:26:04 635 [Note] Event Scheduler: Loaded 0 events
+2015-06-10 15:26:04 635 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-10 17:01:20 635 [Note] mysqld: Normal shutdown
+
+2015-06-10 17:01:20 635 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-10 17:01:20 635 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-10 17:01:20 635 [Note] Shutting down slave threads
+2015-06-10 17:01:20 635 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-10 17:01:20 635 [Note] Binlog end
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'partition'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-10 17:01:20 635 [Note] Shutting down plugin 'InnoDB'
+2015-06-10 17:01:20 635 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-10 17:01:20 635 [Note] InnoDB: Starting shutdown...
+2015-06-10 17:01:21 635 [Note] InnoDB: Shutdown completed; log sequence number 24633375
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'MyISAM'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'MEMORY'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'CSV'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'sha256_password'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-10 17:01:21 635 [Note] Shutting down plugin 'binlog'
+2015-06-10 17:01:21 635 [Note] mysqld: Shutdown complete
+
+2015-06-11 10:51:20 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-11 10:51:20 472 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-11 10:51:20 472 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-11 10:51:20 472 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-11 10:51:20 472 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-11 10:51:20 472 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-11 10:51:20 472 [Note] InnoDB: Memory barrier is not used
+2015-06-11 10:51:20 472 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-11 10:51:20 472 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-11 10:51:20 472 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-11 10:51:20 472 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-11 10:51:20 472 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-11 10:51:21 472 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-11 10:51:21 472 [Note] InnoDB: Waiting for purge to start
+2015-06-11 10:51:21 472 [Note] InnoDB: 5.6.23 started; log sequence number 24677049
+2015-06-11 10:51:21 472 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-11 10:51:21 472 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-11 10:51:21 472 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-11 10:51:21 472 [Note] IPv6 is available.
+2015-06-11 10:51:21 472 [Note]   - '::' resolves to '::';
+2015-06-11 10:51:21 472 [Note] Server socket created on IP: '::'.
+2015-06-11 10:51:21 472 [Note] Event Scheduler: Loaded 0 events
+2015-06-11 10:51:21 472 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-11 17:50:39 472 [Note] mysqld: Normal shutdown
+
+2015-06-11 17:50:39 472 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-11 17:50:39 472 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-11 17:50:39 472 [Note] Shutting down slave threads
+2015-06-11 17:50:39 472 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-11 17:50:39 472 [Note] Binlog end
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'partition'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-11 17:50:39 472 [Note] Shutting down plugin 'InnoDB'
+2015-06-11 17:50:39 472 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-11 17:50:39 472 [Note] InnoDB: Starting shutdown...
+2015-06-11 17:50:40 472 [Note] InnoDB: Shutdown completed; log sequence number 24870564
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'MyISAM'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'MEMORY'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'CSV'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'sha256_password'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-11 17:50:40 472 [Note] Shutting down plugin 'binlog'
+2015-06-11 17:50:41 472 [Note] mysqld: Shutdown complete
+
+2015-06-12 09:54:26 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-12 09:54:26 482 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-12 09:54:26 482 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-12 09:54:26 482 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-12 09:54:26 482 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-12 09:54:26 482 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-12 09:54:26 482 [Note] InnoDB: Memory barrier is not used
+2015-06-12 09:54:26 482 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-12 09:54:26 482 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-12 09:54:26 482 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-12 09:54:26 482 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-12 09:54:26 482 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-12 09:54:26 482 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-12 09:54:26 482 [Note] InnoDB: Waiting for purge to start
+2015-06-12 09:54:27 482 [Note] InnoDB: 5.6.23 started; log sequence number 24873973
+2015-06-12 09:54:27 482 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-12 09:54:27 482 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-12 09:54:27 482 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-12 09:54:27 482 [Note] IPv6 is available.
+2015-06-12 09:54:27 482 [Note]   - '::' resolves to '::';
+2015-06-12 09:54:27 482 [Note] Server socket created on IP: '::'.
+2015-06-12 09:54:27 482 [Note] Event Scheduler: Loaded 0 events
+2015-06-12 09:54:27 482 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-12 13:22:29 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-12 13:22:29 562 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-12 13:22:29 562 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-12 13:22:29 562 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-12 13:22:29 562 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-12 13:22:29 562 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-12 13:22:29 562 [Note] InnoDB: Memory barrier is not used
+2015-06-12 13:22:29 562 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-12 13:22:29 562 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-12 13:22:29 562 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-12 13:22:29 562 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-12 13:22:29 562 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-12 13:22:29 562 [Note] InnoDB: The log sequence numbers 24873973 and 24873973 in ibdata files do not match the log sequence number 24892056 in the ib_logfiles!
+2015-06-12 13:22:29 562 [Note] InnoDB: Database was not shutdown normally!
+2015-06-12 13:22:29 562 [Note] InnoDB: Starting crash recovery.
+2015-06-12 13:22:29 562 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2015-06-12 13:22:31 562 [Note] InnoDB: Restoring possible half-written data pages 
+2015-06-12 13:22:31 562 [Note] InnoDB: from the doublewrite buffer...
+2015-06-12 13:22:31 562 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-12 13:22:31 562 [Note] InnoDB: Waiting for purge to start
+2015-06-12 13:22:31 562 [Note] InnoDB: 5.6.23 started; log sequence number 24892056
+2015-06-12 13:22:31 562 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-12 13:22:31 562 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-12 13:22:31 562 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-12 13:22:31 562 [Note] IPv6 is available.
+2015-06-12 13:22:31 562 [Note]   - '::' resolves to '::';
+2015-06-12 13:22:31 562 [Note] Server socket created on IP: '::'.
+2015-06-12 13:22:31 562 [Note] Event Scheduler: Loaded 0 events
+2015-06-12 13:22:31 562 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-12 18:40:50 562 [Note] mysqld: Normal shutdown
+
+2015-06-12 18:40:50 562 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-12 18:40:50 562 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-12 18:40:50 562 [Note] Shutting down slave threads
+2015-06-12 18:40:50 562 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-12 18:40:50 562 [Note] Binlog end
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'partition'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-12 18:40:50 562 [Note] Shutting down plugin 'InnoDB'
+2015-06-12 18:40:50 562 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-12 18:40:50 562 [Note] InnoDB: Starting shutdown...
+2015-06-12 18:40:51 562 [Note] InnoDB: Shutdown completed; log sequence number 24928912
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'MyISAM'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'MEMORY'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'CSV'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'sha256_password'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-12 18:40:51 562 [Note] Shutting down plugin 'binlog'
+2015-06-12 18:40:51 562 [Note] mysqld: Shutdown complete
+
+2015-06-12 19:52:54 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-12 19:52:54 638 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-12 19:52:54 638 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-12 19:52:54 638 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-12 19:52:54 638 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-12 19:52:54 638 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-12 19:52:54 638 [Note] InnoDB: Memory barrier is not used
+2015-06-12 19:52:54 638 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-12 19:52:54 638 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-12 19:52:54 638 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-12 19:52:54 638 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-12 19:52:54 638 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-12 19:52:54 638 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-12 19:52:54 638 [Note] InnoDB: Waiting for purge to start
+2015-06-12 19:52:54 638 [Note] InnoDB: 5.6.23 started; log sequence number 24928912
+2015-06-12 19:52:54 638 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-12 19:52:54 638 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-12 19:52:54 638 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-12 19:52:54 638 [Note] IPv6 is available.
+2015-06-12 19:52:54 638 [Note]   - '::' resolves to '::';
+2015-06-12 19:52:54 638 [Note] Server socket created on IP: '::'.
+2015-06-12 19:52:54 638 [Note] Event Scheduler: Loaded 0 events
+2015-06-12 19:52:54 638 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-13 00:01:13 638 [Note] mysqld: Normal shutdown
+
+2015-06-13 00:01:13 638 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-13 00:01:13 638 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-13 00:01:13 638 [Note] Shutting down slave threads
+2015-06-13 00:01:13 638 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-13 00:01:13 638 [Note] Binlog end
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'partition'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-13 00:01:13 638 [Note] Shutting down plugin 'InnoDB'
+2015-06-13 00:01:13 638 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-13 00:01:13 638 [Note] InnoDB: Starting shutdown...
+2015-06-13 00:01:14 638 [Note] InnoDB: Shutdown completed; log sequence number 25008415
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'MyISAM'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'MEMORY'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'CSV'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'sha256_password'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-13 00:01:14 638 [Note] Shutting down plugin 'binlog'
+2015-06-13 00:01:14 638 [Note] mysqld: Shutdown complete
+
+2015-06-15 09:45:51 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-15 09:45:51 562 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-15 09:45:51 562 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-15 09:45:51 562 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-15 09:45:51 562 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-15 09:45:51 562 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-15 09:45:51 562 [Note] InnoDB: Memory barrier is not used
+2015-06-15 09:45:51 562 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-15 09:45:51 562 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-15 09:45:51 562 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-15 09:45:51 562 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-15 09:45:51 562 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-15 09:45:51 562 [Note] InnoDB: The log sequence numbers 25008415 and 25008415 in ibdata files do not match the log sequence number 25008425 in the ib_logfiles!
+2015-06-15 09:45:51 562 [Note] InnoDB: Database was not shutdown normally!
+2015-06-15 09:45:51 562 [Note] InnoDB: Starting crash recovery.
+2015-06-15 09:45:51 562 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2015-06-15 09:45:52 562 [Note] InnoDB: Restoring possible half-written data pages 
+2015-06-15 09:45:52 562 [Note] InnoDB: from the doublewrite buffer...
+2015-06-15 09:45:53 562 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-15 09:45:53 562 [Note] InnoDB: Waiting for purge to start
+2015-06-15 09:45:53 562 [Note] InnoDB: 5.6.23 started; log sequence number 25008425
+2015-06-15 09:45:53 562 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-15 09:45:53 562 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-15 09:45:53 562 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-15 09:45:53 562 [Note] IPv6 is available.
+2015-06-15 09:45:53 562 [Note]   - '::' resolves to '::';
+2015-06-15 09:45:53 562 [Note] Server socket created on IP: '::'.
+2015-06-15 09:45:53 562 [Note] Event Scheduler: Loaded 0 events
+2015-06-15 09:45:53 562 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-15 18:55:11 562 [Note] mysqld: Normal shutdown
+
+2015-06-15 18:55:11 562 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-15 18:55:11 562 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-15 18:55:11 562 [Note] Shutting down slave threads
+2015-06-15 18:55:11 562 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-15 18:55:11 562 [Note] Binlog end
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'partition'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-15 18:55:11 562 [Note] Shutting down plugin 'InnoDB'
+2015-06-15 18:55:11 562 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-15 18:55:11 562 [Note] InnoDB: Starting shutdown...
+2015-06-15 18:55:12 562 [Note] InnoDB: Shutdown completed; log sequence number 25170547
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'MyISAM'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'MEMORY'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'CSV'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'sha256_password'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-15 18:55:12 562 [Note] Shutting down plugin 'binlog'
+2015-06-15 18:55:12 562 [Note] mysqld: Shutdown complete
+
+2015-06-16 09:34:45 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-16 09:34:45 2335 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-16 09:34:45 2335 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-16 09:34:45 2335 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-16 09:34:45 2335 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-16 09:34:45 2335 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-16 09:34:45 2335 [Note] InnoDB: Memory barrier is not used
+2015-06-16 09:34:45 2335 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-16 09:34:45 2335 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-16 09:34:45 2335 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-16 09:34:45 2335 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-16 09:34:45 2335 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-16 09:34:45 2335 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-16 09:34:45 2335 [Note] InnoDB: Waiting for purge to start
+2015-06-16 09:34:45 2335 [Note] InnoDB: 5.6.23 started; log sequence number 25170547
+2015-06-16 09:34:45 2335 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-16 09:34:45 2335 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-16 09:34:45 2335 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-16 09:34:45 2335 [Note] IPv6 is available.
+2015-06-16 09:34:45 2335 [Note]   - '::' resolves to '::';
+2015-06-16 09:34:45 2335 [Note] Server socket created on IP: '::'.
+2015-06-16 09:34:45 2335 [Note] Event Scheduler: Loaded 0 events
+2015-06-16 09:34:45 2335 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+
+Status information:
+
+Current dir: /usr/local/var/mysql/
+Running threads: 0  Stack size: 262144
+Current locks:
+lock: 0x7fa09406cd60:
+
+lock: 0x7fa095084960:
+
+lock: 0x7fa095079d60:
+
+lock: 0x7fa09505a360:
+
+lock: 0x7fa09506b760:
+
+lock: 0x7fa095053b60:
+
+lock: 0x7fa095050b60:
+
+lock: 0x7fa09504b160:
+
+lock: 0x10547b358:
+
+lock: 0x10547b280:
+
+lock: 0x10547a350:
+
+lock: 0x10547a278:
+
+lock: 0x10547a1a0:
+
+lock: 0x10547a500:
+
+lock: 0x105478850:
+
+lock: 0x10547b1a8:
+
+lock: 0x105478f10:
+
+lock: 0x105479198:
+
+lock: 0x105478e38:
+
+lock: 0x1054790c0:
+
+lock: 0x105478d60:
+
+lock: 0x105478fe8:
+
+lock: 0x1054796a8:
+
+lock: 0x1054795d0:
+
+lock: 0x1054794f8:
+
+lock: 0x105478c88:
+
+lock: 0x105478a00:
+
+lock: 0x105478bb0:
+
+lock: 0x105478928:
+
+lock: 0x105478ad8:
+
+lock: 0x105479420:
+
+lock: 0x105479348:
+
+lock: 0x105479270:
+
+lock: 0x10547ae48:
+
+lock: 0x10547b0d0:
+
+lock: 0x10547aff8:
+
+lock: 0x10547af20:
+
+lock: 0x10547aae8:
+
+lock: 0x10547aa10:
+
+lock: 0x10547a938:
+
+lock: 0x10547a860:
+
+lock: 0x10547a788:
+
+lock: 0x10547ac98:
+
+lock: 0x10547a6b0:
+
+lock: 0x10547a5d8:
+
+lock: 0x10547abc0:
+
+lock: 0x10547a428:
+
+lock: 0x105479ff0:
+
+lock: 0x10547a0c8:
+
+lock: 0x105479f18:
+
+lock: 0x105479e40:
+
+lock: 0x105479ae0:
+
+lock: 0x105479d68:
+
+lock: 0x105479c90:
+
+lock: 0x105479a08:
+
+lock: 0x105479bb8:
+
+lock: 0x105479930:
+
+lock: 0x105479858:
+
+lock: 0x105479780:
+
+lock: 0x10547ad70:
+
+
+Key caches:
+default
+Buffer_size:       8388608
+Block_size:           1024
+Division_limit:        100
+Age_limit:             300
+blocks used:             0
+not flushed:             0
+w_requests:              0
+writes:                  0
+r_requests:              0
+reads:                   0
+
+
+handler status:
+read_key:            0
+read_next:           0
+read_rnd             0
+read_first:          3
+write:               0
+delete               0
+update:              0
+
+Table status:
+Opened tables:         67
+Open tables:           60
+Open files:            16
+Open streams:           0
+
+Alarm status:
+Active alarms:   0
+Max used alarms: 0
+Next alarm time: 0
+
+
+
+Events status:
+LLA = Last Locked At  LUA = Last Unlocked At
+WOC = Waiting On Condition  DL = Data Locked
+
+Event scheduler status:
+State      : INITIALIZED
+Thread id  : 0
+LLA        : n/a:0
+LUA        : n/a:0
+WOC        : NO
+Workers    : 0
+Executed   : 0
+Data locked: NO
+
+Event queue status:
+Element count   : 0
+Data locked     : NO
+Attempting lock : NO
+LLA             : init_queue:139
+LUA             : init_queue:149
+WOC             : NO
+Next activation : never
+2015-06-16 21:32:48 2335 [Note] mysqld: Normal shutdown
+
+2015-06-16 21:32:48 2335 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-16 21:32:48 2335 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-16 21:32:48 2335 [Note] Shutting down slave threads
+2015-06-16 21:32:48 2335 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-16 21:32:48 2335 [Note] Binlog end
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'partition'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-16 21:32:48 2335 [Note] Shutting down plugin 'InnoDB'
+2015-06-16 21:32:48 2335 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-16 21:32:48 2335 [Note] InnoDB: Starting shutdown...
+2015-06-16 21:32:49 2335 [Note] InnoDB: Shutdown completed; log sequence number 25196923
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'MyISAM'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'MEMORY'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'CSV'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'sha256_password'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-16 21:32:49 2335 [Note] Shutting down plugin 'binlog'
+2015-06-16 21:32:49 2335 [Note] mysqld: Shutdown complete
+
+2015-06-17 11:38:50 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-17 11:38:50 3504 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-17 11:38:50 3504 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-17 11:38:50 3504 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-17 11:38:50 3504 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-17 11:38:50 3504 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-17 11:38:50 3504 [Note] InnoDB: Memory barrier is not used
+2015-06-17 11:38:50 3504 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-17 11:38:50 3504 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-17 11:38:50 3504 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-17 11:38:50 3504 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-17 11:38:50 3504 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-17 11:38:51 3504 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-17 11:38:51 3504 [Note] InnoDB: Waiting for purge to start
+2015-06-17 11:38:51 3504 [Note] InnoDB: 5.6.23 started; log sequence number 25196923
+2015-06-17 11:38:51 3504 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-17 11:38:51 3504 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-17 11:38:51 3504 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-17 11:38:51 3504 [Note] IPv6 is available.
+2015-06-17 11:38:51 3504 [Note]   - '::' resolves to '::';
+2015-06-17 11:38:51 3504 [Note] Server socket created on IP: '::'.
+2015-06-17 11:38:51 3504 [Note] Event Scheduler: Loaded 0 events
+2015-06-17 11:38:51 3504 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-17 18:08:27 3504 [Note] mysqld: Normal shutdown
+
+2015-06-17 18:08:27 3504 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-17 18:08:27 3504 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-17 18:08:27 3504 [Note] Shutting down slave threads
+2015-06-17 18:08:27 3504 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-17 18:08:27 3504 [Note] Binlog end
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'partition'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-17 18:08:27 3504 [Note] Shutting down plugin 'InnoDB'
+2015-06-17 18:08:27 3504 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-17 18:08:27 3504 [Note] InnoDB: Starting shutdown...
+2015-06-17 18:08:28 3504 [Note] InnoDB: Shutdown completed; log sequence number 25203419
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'MyISAM'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'MEMORY'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'CSV'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'sha256_password'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-17 18:08:28 3504 [Note] Shutting down plugin 'binlog'
+2015-06-17 18:08:28 3504 [Note] mysqld: Shutdown complete
+
+2015-06-18 10:16:42 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-18 10:16:42 1833 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-18 10:16:42 1833 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-18 10:16:42 1833 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-18 10:16:42 1833 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-18 10:16:42 1833 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-18 10:16:42 1833 [Note] InnoDB: Memory barrier is not used
+2015-06-18 10:16:42 1833 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-18 10:16:42 1833 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-18 10:16:42 1833 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-18 10:16:42 1833 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-18 10:16:42 1833 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-18 10:16:42 1833 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-18 10:16:42 1833 [Note] InnoDB: Waiting for purge to start
+2015-06-18 10:16:42 1833 [Note] InnoDB: 5.6.23 started; log sequence number 25203419
+2015-06-18 10:16:42 1833 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-18 10:16:42 1833 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-18 10:16:42 1833 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-18 10:16:42 1833 [Note] IPv6 is available.
+2015-06-18 10:16:42 1833 [Note]   - '::' resolves to '::';
+2015-06-18 10:16:42 1833 [Note] Server socket created on IP: '::'.
+2015-06-18 10:16:42 1833 [Note] Event Scheduler: Loaded 0 events
+2015-06-18 10:16:42 1833 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-18 13:50:16 1833 [Note] mysqld: Normal shutdown
+
+2015-06-18 13:50:16 1833 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-18 13:50:16 1833 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-18 13:50:16 1833 [Note] Shutting down slave threads
+2015-06-18 13:50:16 1833 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-18 13:50:16 1833 [Note] Binlog end
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'partition'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-18 13:50:16 1833 [Note] Shutting down plugin 'InnoDB'
+2015-06-18 13:50:16 1833 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-18 13:50:16 1833 [Note] InnoDB: Starting shutdown...
+2015-06-18 13:50:17 1833 [Note] InnoDB: Shutdown completed; log sequence number 25203429
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'MyISAM'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'MEMORY'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'CSV'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'sha256_password'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-18 13:50:17 1833 [Note] Shutting down plugin 'binlog'
+2015-06-18 13:50:17 1833 [Note] mysqld: Shutdown complete
+
+2015-06-18 15:41:16 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-18 15:41:16 1599 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-18 15:41:16 1599 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-18 15:41:16 1599 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-18 15:41:16 1599 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-18 15:41:16 1599 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-18 15:41:16 1599 [Note] InnoDB: Memory barrier is not used
+2015-06-18 15:41:16 1599 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-18 15:41:16 1599 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-18 15:41:16 1599 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-18 15:41:16 1599 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-18 15:41:16 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:16 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:16 1599 [Note] InnoDB: Retrying to lock the first data file
+2015-06-18 15:41:17 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:17 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:18 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:18 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:19 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:19 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:20 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:20 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:21 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:21 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:22 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:22 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:23 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:23 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:24 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:24 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:25 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:25 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:26 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:26 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:27 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:27 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:28 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:28 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:29 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:29 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:30 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:30 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:31 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:31 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:32 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:32 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:33 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:33 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:34 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:34 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:35 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:35 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:36 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:36 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:37 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:37 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:38 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:38 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:39 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:39 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:40 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:40 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:41 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:41 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:42 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:42 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:43 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:43 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:44 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:44 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:45 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:45 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:46 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:46 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:47 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:47 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:48 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:48 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:49 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:49 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:50 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:50 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:51 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:51 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:52 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:52 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:53 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:53 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:54 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:54 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:55 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:55 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:56 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:56 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:57 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:57 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:58 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:58 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:41:59 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:41:59 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:00 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:00 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:01 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:01 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:03 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:03 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:04 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:04 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:05 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:05 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:06 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:06 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:07 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:07 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:08 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:08 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:09 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:09 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:10 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:10 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:11 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:11 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:12 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:12 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:13 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:13 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:14 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:14 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:15 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:15 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:16 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:16 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:17 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:17 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:18 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:18 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:19 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:19 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:20 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:20 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:21 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:21 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:22 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:22 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:23 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:23 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:24 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:24 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:25 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:25 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:26 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:26 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:27 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:27 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:28 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:28 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:29 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:29 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:30 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:30 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:31 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:31 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:32 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:32 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:33 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:33 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:34 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:34 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:35 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:35 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:36 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:36 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:37 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:37 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:38 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:38 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:39 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:39 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:40 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:40 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:41 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:41 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:42 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:42 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:43 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:43 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:44 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:44 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:45 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:45 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:46 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:46 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:47 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:47 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:48 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:48 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:49 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:49 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:50 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:50 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:51 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:51 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:52 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:52 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:53 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:53 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:54 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:54 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:55 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:55 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:56 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:56 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:57 1599 [ERROR] InnoDB: Unable to lock ./ibdata1, error: 35
+2015-06-18 15:42:57 1599 [Note] InnoDB: Check that you do not already have another mysqld process using the same InnoDB data or log files.
+2015-06-18 15:42:57 1599 [Note] InnoDB: Unable to open the first data file
+2015-06-18 15:42:57 7fff7ab8d300  InnoDB: Operating system error number 35 in a file operation.
+InnoDB: Error number 35 means 'Resource temporarily unavailable'.
+InnoDB: Some operating system error numbers are described at
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/operating-system-error-codes.html
+2015-06-18 15:42:57 1599 [ERROR] InnoDB: Can't open './ibdata1'
+2015-06-18 15:42:57 1599 [ERROR] InnoDB: Could not open or create the system tablespace. If you tried to add new data files to the system tablespace, and it failed here, you should now edit innodb_data_file_path in my.cnf back to what it was, and remove the new ibdata files InnoDB created in this failed attempt. InnoDB only wrote those files full of zeros, but did not yet use them in any way. But be careful: do not remove old data files which contain your precious data!
+2015-06-18 15:42:57 1599 [ERROR] Plugin 'InnoDB' init function returned error.
+2015-06-18 15:42:57 1599 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2015-06-18 15:42:57 1599 [ERROR] Unknown/unsupported storage engine: InnoDB
+2015-06-18 15:42:57 1599 [ERROR] Aborting
+
+2015-06-18 15:42:57 1599 [Note] Binlog end
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'partition'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'MyISAM'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'MEMORY'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'CSV'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'sha256_password'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-18 15:42:57 1599 [Note] Shutting down plugin 'binlog'
+2015-06-18 15:42:57 1599 [Note] mysqld: Shutdown complete
+
+2015-06-19 10:21:58 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-19 10:21:58 524 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-19 10:21:58 524 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-19 10:21:58 524 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-19 10:21:58 524 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-19 10:21:58 524 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-19 10:21:58 524 [Note] InnoDB: Memory barrier is not used
+2015-06-19 10:21:58 524 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-19 10:21:58 524 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-19 10:21:58 524 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-19 10:21:58 524 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-19 10:21:58 524 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-19 10:21:58 524 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-19 10:21:58 524 [Note] InnoDB: Waiting for purge to start
+2015-06-19 10:21:58 524 [Note] InnoDB: 5.6.23 started; log sequence number 25205285
+2015-06-19 10:21:58 524 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-19 10:21:58 524 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-19 10:21:58 524 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-19 10:21:58 524 [Note] IPv6 is available.
+2015-06-19 10:21:58 524 [Note]   - '::' resolves to '::';
+2015-06-19 10:21:58 524 [Note] Server socket created on IP: '::'.
+2015-06-19 10:21:59 524 [Note] Event Scheduler: Loaded 0 events
+2015-06-19 10:21:59 524 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-19 18:48:05 524 [Note] mysqld: Normal shutdown
+
+2015-06-19 18:48:05 524 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-19 18:48:05 524 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-19 18:48:05 524 [Note] Shutting down slave threads
+2015-06-19 18:48:05 524 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-19 18:48:05 524 [Note] Binlog end
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'partition'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-19 18:48:05 524 [Note] Shutting down plugin 'InnoDB'
+2015-06-19 18:48:05 524 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-19 18:48:05 524 [Note] InnoDB: Starting shutdown...
+2015-06-19 18:48:06 524 [Note] InnoDB: Shutdown completed; log sequence number 25207474
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'MyISAM'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'MEMORY'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'CSV'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'sha256_password'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-19 18:48:06 524 [Note] Shutting down plugin 'binlog'
+2015-06-19 18:48:06 524 [Note] mysqld: Shutdown complete
+
+2015-06-22 10:16:45 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-22 10:16:45 648 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-22 10:16:45 648 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-22 10:16:45 648 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-22 10:16:45 648 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-22 10:16:45 648 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-22 10:16:45 648 [Note] InnoDB: Memory barrier is not used
+2015-06-22 10:16:45 648 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-22 10:16:45 648 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-22 10:16:45 648 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-22 10:16:45 648 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-22 10:16:45 648 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-22 10:16:45 648 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-22 10:16:45 648 [Note] InnoDB: Waiting for purge to start
+2015-06-22 10:16:45 648 [Note] InnoDB: 5.6.23 started; log sequence number 25451101
+2015-06-22 10:16:45 648 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-22 10:16:45 648 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-22 10:16:45 648 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-22 10:16:45 648 [Note] IPv6 is available.
+2015-06-22 10:16:45 648 [Note]   - '::' resolves to '::';
+2015-06-22 10:16:45 648 [Note] Server socket created on IP: '::'.
+2015-06-22 10:16:45 648 [Note] Event Scheduler: Loaded 0 events
+2015-06-22 10:16:45 648 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-22 18:13:26 648 [Note] mysqld: Normal shutdown
+
+2015-06-22 18:13:26 648 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-22 18:13:26 648 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-22 18:13:26 648 [Note] Shutting down slave threads
+2015-06-22 18:13:26 648 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-22 18:13:26 648 [Note] Binlog end
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'partition'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-22 18:13:26 648 [Note] Shutting down plugin 'InnoDB'
+2015-06-22 18:13:26 648 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-22 18:13:26 648 [Note] InnoDB: Starting shutdown...
+2015-06-22 18:13:28 648 [Note] InnoDB: Shutdown completed; log sequence number 25528026
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'MyISAM'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'MEMORY'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'CSV'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'sha256_password'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-22 18:13:28 648 [Note] Shutting down plugin 'binlog'
+2015-06-22 18:13:28 648 [Note] mysqld: Shutdown complete
+
+2015-06-23 10:42:37 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-23 10:42:37 1057 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-23 10:42:37 1057 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-23 10:42:37 1057 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-23 10:42:37 1057 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-23 10:42:37 1057 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-23 10:42:37 1057 [Note] InnoDB: Memory barrier is not used
+2015-06-23 10:42:37 1057 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-23 10:42:37 1057 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-23 10:42:37 1057 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-23 10:42:37 1057 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-23 10:42:37 1057 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-23 10:42:37 1057 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-23 10:42:37 1057 [Note] InnoDB: Waiting for purge to start
+2015-06-23 10:42:37 1057 [Note] InnoDB: 5.6.23 started; log sequence number 25528026
+2015-06-23 10:42:37 1057 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-23 10:42:37 1057 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-23 10:42:37 1057 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-23 10:42:37 1057 [Note] IPv6 is available.
+2015-06-23 10:42:37 1057 [Note]   - '::' resolves to '::';
+2015-06-23 10:42:37 1057 [Note] Server socket created on IP: '::'.
+2015-06-23 10:42:38 1057 [Note] Event Scheduler: Loaded 0 events
+2015-06-23 10:42:38 1057 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-23 18:23:44 1057 [Note] mysqld: Normal shutdown
+
+2015-06-23 18:23:44 1057 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-23 18:23:44 1057 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-23 18:23:44 1057 [Note] Shutting down slave threads
+2015-06-23 18:23:44 1057 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-23 18:23:44 1057 [Note] Binlog end
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'partition'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-23 18:23:44 1057 [Note] Shutting down plugin 'InnoDB'
+2015-06-23 18:23:44 1057 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-23 18:23:44 1057 [Note] InnoDB: Starting shutdown...
+2015-06-23 18:23:45 1057 [Note] InnoDB: Shutdown completed; log sequence number 25529228
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'MyISAM'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'MEMORY'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'CSV'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'sha256_password'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-23 18:23:45 1057 [Note] Shutting down plugin 'binlog'
+2015-06-23 18:23:45 1057 [Note] mysqld: Shutdown complete
+
+2015-06-24 12:26:31 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-24 12:26:31 7168 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-24 12:26:31 7168 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-24 12:26:31 7168 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-24 12:26:31 7168 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-24 12:26:31 7168 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-24 12:26:31 7168 [Note] InnoDB: Memory barrier is not used
+2015-06-24 12:26:31 7168 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-24 12:26:31 7168 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-24 12:26:31 7168 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-24 12:26:31 7168 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-24 12:26:31 7168 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-24 12:26:31 7168 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-24 12:26:31 7168 [Note] InnoDB: Waiting for purge to start
+2015-06-24 12:26:31 7168 [Note] InnoDB: 5.6.23 started; log sequence number 25529228
+2015-06-24 12:26:31 7168 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-24 12:26:31 7168 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-24 12:26:31 7168 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-24 12:26:31 7168 [Note] IPv6 is available.
+2015-06-24 12:26:31 7168 [Note]   - '::' resolves to '::';
+2015-06-24 12:26:31 7168 [Note] Server socket created on IP: '::'.
+2015-06-24 12:26:31 7168 [Note] Event Scheduler: Loaded 0 events
+2015-06-24 12:26:31 7168 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-24 18:20:54 7168 [Note] mysqld: Normal shutdown
+
+2015-06-24 18:20:54 7168 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-24 18:20:54 7168 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-24 18:20:54 7168 [Note] Shutting down slave threads
+2015-06-24 18:20:54 7168 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-24 18:20:54 7168 [Note] Binlog end
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'partition'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-24 18:20:54 7168 [Note] Shutting down plugin 'InnoDB'
+2015-06-24 18:20:54 7168 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-24 18:20:54 7168 [Note] InnoDB: Starting shutdown...
+2015-06-24 18:20:56 7168 [Note] InnoDB: Shutdown completed; log sequence number 25557307
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'MyISAM'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'MEMORY'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'CSV'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'sha256_password'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-24 18:20:56 7168 [Note] Shutting down plugin 'binlog'
+2015-06-24 18:20:56 7168 [Note] mysqld: Shutdown complete
+
+2015-06-25 10:18:52 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-06-25 10:18:52 640 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2015-06-25 10:18:52 640 [Note] Plugin 'FEDERATED' is disabled.
+2015-06-25 10:18:52 640 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-06-25 10:18:52 640 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-06-25 10:18:52 640 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-06-25 10:18:52 640 [Note] InnoDB: Memory barrier is not used
+2015-06-25 10:18:52 640 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-06-25 10:18:52 640 [Note] InnoDB: Using CPU crc32 instructions
+2015-06-25 10:18:52 640 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-06-25 10:18:52 640 [Note] InnoDB: Completed initialization of buffer pool
+2015-06-25 10:18:52 640 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-06-25 10:18:53 640 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-06-25 10:18:53 640 [Note] InnoDB: Waiting for purge to start
+2015-06-25 10:18:53 640 [Note] InnoDB: 5.6.23 started; log sequence number 25557307
+2015-06-25 10:18:53 640 [Note] RSA private key file not found: /usr/local/var/mysql//private_key.pem. Some authentication plugins will not work.
+2015-06-25 10:18:53 640 [Note] RSA public key file not found: /usr/local/var/mysql//public_key.pem. Some authentication plugins will not work.
+2015-06-25 10:18:53 640 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-06-25 10:18:53 640 [Note] IPv6 is available.
+2015-06-25 10:18:53 640 [Note]   - '::' resolves to '::';
+2015-06-25 10:18:53 640 [Note] Server socket created on IP: '::'.
+2015-06-25 10:18:53 640 [Note] Event Scheduler: Loaded 0 events
+2015-06-25 10:18:53 640 [Note] mysqld: ready for connections.
+Version: '5.6.23'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-06-25 18:38:54 640 [Note] mysqld: Normal shutdown
+
+2015-06-25 18:38:54 640 [Note] Giving 0 client threads a chance to die gracefully
+2015-06-25 18:38:54 640 [Note] Event Scheduler: Purging the queue. 0 events
+2015-06-25 18:38:54 640 [Note] Shutting down slave threads
+2015-06-25 18:38:54 640 [Note] Forcefully disconnecting 0 remaining clients
+2015-06-25 18:38:54 640 [Note] Binlog end
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'partition'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_CMP'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'INNODB_TRX'
+2015-06-25 18:38:54 640 [Note] Shutting down plugin 'InnoDB'
+2015-06-25 18:38:54 640 [Note] InnoDB: FTS optimize thread exiting.
+2015-06-25 18:38:54 640 [Note] InnoDB: Starting shutdown...
+2015-06-25 18:38:55 640 [Note] InnoDB: Shutdown completed; log sequence number 25661750
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'BLACKHOLE'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'ARCHIVE'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'MyISAM'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'MEMORY'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'CSV'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'sha256_password'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'mysql_old_password'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'mysql_native_password'
+2015-06-25 18:38:55 640 [Note] Shutting down plugin 'binlog'
+2015-06-25 18:38:55 640 [Note] mysqld: Shutdown complete
+
+2015-07-03 09:51:30 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2015-07-03 09:51:30 0 [Note] mysqld (mysqld 5.6.25) starting as process 493 ...
+2015-07-03 09:51:30 493 [Warning] Can't create test file /usr/local/mysql-5.6.25-osx10.8-x86_64/data/MotdeMacBook-Air.lower-test
+2015-07-03 09:51:30 493 [Warning] Can't create test file /usr/local/mysql-5.6.25-osx10.8-x86_64/data/MotdeMacBook-Air.lower-test
+2015-07-03 09:51:30 493 [Note] Plugin 'FEDERATED' is disabled.
+mysqld: Can't find file: './mysql/plugin.frm' (errno: 13 - Permission denied)
+2015-07-03 09:51:30 493 [ERROR] Can't open the mysql.plugin table. Please run mysql_upgrade to create it.
+2015-07-03 09:51:30 493 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-07-03 09:51:30 493 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-07-03 09:51:30 493 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-07-03 09:51:30 493 [Note] InnoDB: Memory barrier is not used
+2015-07-03 09:51:30 493 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2015-07-03 09:51:30 493 [Note] InnoDB: Using CPU crc32 instructions
+2015-07-03 09:51:30 493 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-07-03 09:51:30 493 [Note] InnoDB: Completed initialization of buffer pool
+2015-07-03 09:51:30 493 [ERROR] InnoDB: ./ibdata1 can't be opened in read-write mode
+2015-07-03 09:51:30 493 [ERROR] InnoDB: The system tablespace must be writable!
+2015-07-03 09:51:30 493 [ERROR] Plugin 'InnoDB' init function returned error.
+2015-07-03 09:51:30 493 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2015-07-03 09:51:30 493 [ERROR] Unknown/unsupported storage engine: InnoDB
+2015-07-03 09:51:30 493 [ERROR] Aborting
+
+2015-07-03 09:51:30 493 [Note] Binlog end
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'partition'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_METRICS'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_CMP'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_LOCKS'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'INNODB_TRX'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'BLACKHOLE'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'ARCHIVE'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'MRG_MYISAM'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'MyISAM'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'MEMORY'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'CSV'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'sha256_password'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'mysql_old_password'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'mysql_native_password'
+2015-07-03 09:51:30 493 [Note] Shutting down plugin 'binlog'
+2015-07-03 09:51:30 493 [Note] mysqld: Shutdown complete
+

@@ -1,0 +1,54 @@
+<div class="box-bar">
+
+  <%=link_to image_tag('logo.png', :class => "box_logo"), root_path %>
+
+
+  <ul class="box-menu-right">
+    <li>
+      <span class="box-menu-item" ng-click="add_task()">添加 +</span>
+    </li>
+  </ul>
+
+  <div class="clear"></div>
+
+</div>
+
+
+<style>
+li,td {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}
+
+.box-bar {
+  display: relative;
+}
+
+.clear {
+  clear: both;
+}
+
+.box-menu-right {
+    display: relative;
+    list-style: none;
+    float: right;
+}
+
+.box-menu-right li {
+  display: relative;
+  padding-top: 14px;
+}
+
+.box-menu-right li span.box-menu-item{
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 5px 20px;
+  font-size: 16px;
+  background: #FFDA8F;
+}
+
+</style>

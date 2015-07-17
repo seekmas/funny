@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task title:</strong>
+  <%= @work_task.task_title %>
+</p>
+
+<p>
+  <strong>Work:</strong>
+  <%= @work_task.work_id %>
+</p>
+
+<p>
+  <strong>Expired at:</strong>
+  <%= @work_task.expired_at %>
+</p>
+
+<p>
+  <strong>Task description:</strong>
+  <%= @work_task.task_description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @work_task.user_id %>
+</p>
+
+<p>
+  <strong>People work for:</strong>
+  <%= @work_task.people_work_for %>
+</p>
+
+<p>
+  <strong>Notification list:</strong>
+  <%= @work_task.notification_list %>
+</p>
+
+<%= link_to 'Edit', edit_work_task_path(@work_task) %> |
+<%= link_to 'Back', work_tasks_path %>

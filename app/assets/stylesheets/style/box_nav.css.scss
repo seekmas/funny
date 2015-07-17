@@ -1,0 +1,90 @@
+.box-nav ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+}
+
+.box-nav ul li {
+	display: table;
+	margin: 0 auto;
+}
+
+.box-nav ul li.box-nav-logo img {
+	width: 120px;
+}
+
+.box-nav ul li.box-nav-avatar {
+	float: right;
+}
+
+.box-nav ul li.box-nav-avatar img {
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+}
+
+.box-sub-nav {
+	z-index: 299;
+	display: table;
+	margin: 0 auto;
+}
+
+.box-sub-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.box-sub-nav > ul > li {
+	display: inline-block;
+	margin: 5px 40px;
+}
+
+.box-dropdown {
+	display: none;
+	margin-top: 20px;
+	position: fixed;
+	margin-left: -20px;
+}
+
+.box-dropdown-display {
+	position: fixed;
+	display: block;
+}
+
+.box-sub-nav ul li ul::before{
+    content: "";
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    margin-left: -10px;
+    background-image: image-url("triangle.png");
+}
+
+.box-sub-nav ul li ul {
+	background: rgba(255,255,255,1);
+	z-index: 399;
+	padding: 5px 0;
+	border-radius: 5px;
+	border: 1px solid rgba(230,234,237,1);
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	width: 140px;
+	top: 0;
+	left: 0;
+}
+
+.box-sub-nav ul li ul li a{
+	display: block;
+	padding: 10px;
+}
+
+.box-sub-nav ul li ul li a:hover{
+	color: rgba(255,255,255,1);
+	display: block;
+	background: rgba(77, 19, 79, 1);
+	padding: 10px;
+}

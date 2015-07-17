@@ -1,0 +1,328 @@
+#menu {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    width: 150px;
+    transition: left 300ms ease 0s;
+}
+
+.box-wrap {
+	position: relative;
+    margin-top: 10px;
+
+}
+
+.box-main {
+    margin-left: 150px;
+}
+
+.box-main-tiny {
+    margin-left: 150px;
+    margin-right: 350px;
+}
+
+.nested-fields {
+    margin-top: 25px;
+}
+
+.box-avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+}
+
+.box-next-stage {
+    line-height: 1.5;
+    vertical-align: middle;
+    color: rgba(255,255,255,1) !important;
+    background: #2AA67A none repeat scroll 0% 0%;
+    padding: 10px 20px 6px 20px;
+    border-radius: 5px;
+}
+
+/*********************** Icon ***********************/
+a.daily {
+    height: 30px;
+    width: 30px;
+    background-image: image-url('note.svg');
+}
+
+a.note {
+    padding-left: 30px;
+    background-image: image-url('note.svg');
+
+    height: 500px;
+    width: 500px;
+}
+/*********************** Icon ***********************/
+
+/*********************** Navbar ***********************/
+.box-nav {
+	padding: 10px;
+}
+
+.box-nav ul {
+	list-style: none;
+}
+
+.box-nav li{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.box-nav a{
+	text-decoration: none;
+}
+
+.box-nav a:hover{
+    color: #2AA67A;
+    text-decoration: none;
+}
+/*********************** Navbar ***********************/
+
+/*********************** Edit Content ***********************/
+.box-edit {
+    padding: 10px;
+    position: relative;
+    background: rgba(255,255,255,1);
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #37404E;
+    text-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+/*********************** Edit Content ***********************/
+
+/*********************** Left Side ***********************/
+.box-panel {
+    height: 100%;
+    position: relative;
+    background: rgba(54,70,93,1);
+    padding: 10px 0px 10px 0px;
+}
+
+.box-panel a{
+    text-decoration: none;
+}
+
+.box-panel a:hover{
+    color: rgba(221,221,221,1);
+}
+
+.box-panel ul{
+    list-style: none;
+    margin: 50px 0 0 0;
+    padding: 0;
+}
+
+.box-panel li{
+    line-height: 1;
+    margin: 10px;
+}
+
+.box-panel span{
+
+}
+
+.box-panel li a {
+    color: #a7abb0 !important;
+}
+
+.box-panel li a img {
+    background: #36465D;
+    fill: #a7abb0;
+    vertical-align: middle;
+    height: 22px;
+    width: 22px;
+}
+
+.box-calendar {
+    margin: 40px 0;
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    background-position: 28px 0px;
+    background-image: image-url("calendar.png");
+    background-repeat: no-repeat;
+    height: 170px;
+    width: 100%;
+    border-bottom: 1px solid rgba(126, 121, 131, 1);
+}
+
+.box-calendar .box-title {
+    left: 55px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 23px;
+}
+
+.box-calendar h3 {
+    cursor: pointer;
+    font-size: 24px;
+    left: 60px;
+    position: absolute;
+    bottom: 35px;
+}
+
+#datetimepicker {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: transparent;
+    cursor: none;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    color: rgba(74, 17, 83, 1);
+    border: none;
+    background: rgba(255,255,255,0);
+}
+
+/*********************** Left Side ***********************/
+
+/*********************** Person Card ***********************/
+.box-p {
+    transition: background-color 200ms ease-in-out 0s, opacity 200ms ease-in-out 0s;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #37404E;
+    text-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #F6F9FA;
+    display: block;
+    height: 90px;
+    padding: 10px 20px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.box-p:hover {
+	background-color: #E6EEF1;
+}
+
+a.box-p-button {
+	text-decoration: none;
+	display: block;
+}
+
+h4.box-p-name {
+	margin: 10px 0;
+	font-size: 16px;
+}
+
+span.box-p-info {
+	  color: #8C989E;
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+img.box-p-avatar {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 128px;
+    margin-top: -32px;
+}
+/*********************** Person Card ***********************/
+
+/*********************** Message Box ***********************/
+.box-msg {
+    margin: 10px 0;
+    padding: 0;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #37404E;
+    text-shadow: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box-msg > .box-title {
+    border-radius: 5px;
+    color: #37404E;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(246,249,250,1);
+    margin: 0 auto;
+}
+
+.box-msg > .box-title > a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.box-msg > .box-content {
+    color: #8C989E;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px 10px;
+}
+/*********************** Message Box ***********************/
+
+/*********************** Form ***********************/
+
+.box-form-row {
+    margin: 10px;
+}
+
+.box-input {
+    margin: 10px 0;
+}
+
+/*********************** Form ***********************/
+
+/*********************** Menu ***********************/
+.box-menu-table-vertical {
+    width: 100%;
+}
+
+.box-menu-table-vertical tr td{
+    text-align: center;
+}
+
+div.box-wedding-info {
+    display: table;
+    margin: 10px auto;
+}
+
+div.box-wedding-date {
+    height: 54px;
+    width: 54px;
+    background-image: image-url('menu.png');
+}
+
+table.box-menu-table {
+    margin: 20px 40px;
+    width: 100px;
+}
+
+table.box-menu-table tr td{
+    padding: 5px 0;
+}
+
+div.box-wedding-daily {
+    display: inline-block;
+    height: 30px;
+    width: 32px;
+    background-position: -11px 30px;
+    background-image: image-url('menu.png');
+}
+
+div.box-wedding-note {
+    display: inline-block;
+    height: 30px;
+    width: 32px;
+    background-position: -10px 87px;
+    background-image: image-url('menu.png');
+}
+/***********************  Menu ***********************/

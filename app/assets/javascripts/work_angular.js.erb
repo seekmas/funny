@@ -1,0 +1,387 @@
+<% environment.context_class.instance_eval { include Rails.application.routes.url_helpers } %>
+
+var app = angular.module("project",
+[
+  'cgBusy',
+  '720kb.datepicker',
+  'ngResource',
+  'checklist-model',
+  'flash',
+  'ui.sortable',
+  'oitozero.ngSweetAlert',
+  'angularMoment'
+])
+
+.run(function(amMoment){
+  amMoment.changeLocale('zh-cn');
+})
+
+.filter('range', function() {
+  return function(input, min, max) {
+    min = parseInt(min);
+    max = parseInt(max);
+    for (var i=min; i<=max; i++)
+      input.push(i);
+    return input;
+  };
+})
+
+.factory('WorkTask', ['$resource',function($resource) {
+  return $resource('/api/work_tasks/:id', {id: '@id'}, {
+    'get': { method: 'GET', isArray: true },
+    'create': { method: 'POST' },
+    'put': { method: 'PUT' }
+  });
+}])
+
+.factory('WorkCategory', ['$resource', function($resource){
+  return $resource('/api/work_categories/:id', { id: '@id'}, {
+
+    'get': { method: 'GET', isArray: true },
+    'create': { method: 'POST' },
+    'put': { method: 'PUT' }
+
+  });
+}])
+
+.factory('TaskType',['$resource', function($resource){
+  return $resource('/api/task_types/:id', { id: '@id' }, {
+    'get': { method: 'GET', isArray: true },
+    'create': { method: 'POST' },
+    'put': { method: 'PUT' }
+  });
+}])
+
+.controller("ProjectController",
+  ['$scope','$timeout','$http','Flash','SweetAlert','WorkTask','WorkCategory','TaskType',
+  function($scope, $timeout, $http, Flash, SweetAlert, WorkTask, WorkCategory, TaskType){
+
+  $scope.main_style = "box-main";
+  $scope.edit_display = false;
+  $scope.choose_task = {};
+  $scope.calendar_task = {};
+  $scope.new_task = [];
+
+  var date = new Date()
+  $scope.month = date.getMonth()+1;
+
+  $scope.promise_task = WorkTask.query().$promise.then(function(result){
+    return $timeout(function() {
+       return $scope.tasks = result;;
+     }, 1000);
+  });
+
+  $scope.promise_category = WorkCategory.query().$promise.then(function(result){
+    return $timeout(function() {
+       return $scope.categories = result;
+     }, 1000);
+  });
+
+  $scope.promise_type = TaskType.query().$promise.then(function(result){
+
+    return $timeout(function() {
+       return $scope.types = result;
+     }, 1000);
+  });
+
+  $http.post('/api/angular/get_work', {}).then(function(response){
+    $scope.wedding_info = response.data;
+
+    if($scope.wedding_info.target_date == null) {
+      SweetAlert.swal({
+        customClass: "datepicker",
+        title: "设置婚礼日期",
+        text: "请设置你的婚礼日期:",
+        type: "input",
+        confirmButtonText: "完成",
+        confirmButtonColor: "#9777B5",
+        showCancelButton: false,
+        closeOnConfirm: false,
+        animation: "slide-from-top",
+        inputPlaceholder: "我的婚期,例如: 2016-08-08"
+      },
+      function(inputValue){
+        if (inputValue === false) return false;
+
+        if(/\d{4}\-[0-1][0-9]-[0-3][0-9]/.test(inputValue)) {
+
+        }else {
+          swal.showInputError("婚期的格式错误，正确格式为 2016-08-08 ");
+          return false;
+        }
+
+        if (inputValue === "") {
+          swal.showInputError("需要先设置婚期才能使用!");
+          return false
+        }
+        $http.post('/api/angular/set_target_date', { target_date: inputValue }).then(function(response){
+
+            //SweetAlert.swal("婚期设置成功!", "你已经将婚期设置为"+$scope.wedding_info.target_date+"!", "success");
+
+        });
+        swal("婚期设置成功!", "你的婚期被设定为: " + inputValue, "success");
+      });
+    }
+
+  });
+
+  $scope.today = new Date();
+  $scope.update_id = 0;
+  $scope.task = {};
+  $scope.assign_to = "@加你要分配的人";
+  $scope.macros = {
+    "btw": "by the way"
+  };
+
+  $scope.endline = function(target_date) {
+    return Date.parse(target_date) - $scope.today;
+  }
+
+  $scope.people = [
+      { id: 1, label: '金涛', job: '设计师'},
+      { id: 2, label: '程曦', job: '设计师'},
+      { id: 3, label: '吴家耀', job: '程序员'},
+      { id: 4, label: 'Michael', job: '产品设计'}
+  ];
+
+  // $scope.dragControlListeners = {
+  //     accept: function (sourceItemHandleScope, destSortableScope) {return boolean} ,
+  //     itemMoved: function (event) { },
+  //     orderChanged: function(event) { },
+  //     containment: '#board'
+  // };
+
+  $scope.get_border_color = function(id) {
+    var value = id % 10;
+    return 'p_side_'+value;
+  };
+
+  $scope.get_bg_color = function(id) {
+    var value = id % 10;
+    return 'p_color_'+value;
+  }
+
+  $scope.add_task_from = function(month) {
+    $scope.task.month = month;
+    $scope.task.expired_at = moment(new Date(new Date().getFullYear(), month, 0)).format('YYYY-MM-DD');
+    $scope.edit_display = true;
+
+  }
+
+  $scope.find_task_with_category = function(category){
+    return function(task) {
+      if(category.id == task.work_category_id){
+        return task;
+      }
+    }
+  };
+
+  $scope.find_task_with_empty_category = function() {
+    return function(task) {
+      if(null == task.work_category_id){
+        return task;
+      }
+    }
+  }
+
+  $scope.find_suitable_task = function(type_id, month){
+    return function(task) {
+      if(task.task_type_id == type_id && task.month == month )
+      {
+        return task;
+      }
+    }
+  }
+
+  $scope.upload_date = function(){
+    console.log($scope.wedding_info.target_date);
+
+    $http.post('/api/angular/set_target_date', { target_date: $scope.wedding_info.target_date }).then(function(response){
+
+        SweetAlert.swal("婚期设置成功!", "你已经将婚期设置为"+$scope.wedding_info.target_date+"!", "success");
+
+    });
+  };
+
+  $scope.unfinish_task = function(task) {
+    if(task.work_done == true) {
+      task.work_done = false;
+
+      $http.post('/api/angular/set_task_done', { task_id: task.id }).then(function(response){
+        console.log(response.data);
+      });
+
+    }else {
+      task.work_done = true;
+    }
+  }
+
+  $scope.finish_task = function(task) {
+
+    if(task.work_done == true) {
+      task.work_done = false;
+    }else {
+
+      $http.post('/api/angular/set_task_done', { task_id: task.id }).then(function(response){
+        console.log(response.data);
+      });
+
+      task.work_done = true;
+    }
+  };
+
+  $scope.add_task = function() {
+    $scope.update_id = null;
+    $scope.task = {};
+    if($scope.edit_display == true) {
+      $scope.edit_display = false;
+    }else {
+      $scope.edit_display = true;
+    }
+
+    // if($scope.main_style == "box-main") {
+    //   $scope.main_style = "box-main-tiny";
+    // }else {
+    //   $scope.main_style = "box-main";
+    // }
+  };
+
+  $scope.remove_task = function(task) {
+    var index = $scope.tasks.indexOf(task);
+    SweetAlert.swal({
+       title: "真的要删除任务吗?",
+       text: "点确定则删除任务 ("+task.task_title+")",
+       type: "warning",
+       showCancelButton: true,
+       cancelButtonText: "取消",
+       confirmButtonColor: "#9777B5",
+       confirmButtonText: "确定",
+       closeOnConfirm: false,
+       closeOnCancel: false
+    },
+    function(isConfirm){
+      if (isConfirm) {
+        $scope.tasks.splice(index, 1);
+        WorkTask.remove({ id: task.id }, function(){
+        });
+        SweetAlert.swal("删除成功!", "任务已经被删除.", "success");
+      } else {
+        SweetAlert.swal("取消删除", "任务没有被删除.", "error");
+      }
+
+    });
+
+
+  }
+
+  $scope.cancel = function() {
+    $scope.update_id = 0;
+    if($scope.edit_display == true) {
+      $scope.edit_display = false;
+    }else {
+      $scope.edit_display = true;
+    }
+
+    // if($scope.main_style == "box-main") {
+    //   $scope.main_style = "box-main-tiny";
+    // }else {
+    //   $scope.main_style = "box-main";
+    // }
+  };
+
+  $scope.task_detail = function(t) {
+    $scope.edit_display = true;
+    // $scope.main_style = "box-main-tiny";
+
+    $scope.update_id = t.id;
+    $scope.task = t;
+  };
+
+  $scope.getSelectedPeople = function(item) {
+    return item.label+";";
+  };
+
+  $scope.work_done = function(task) {
+    task.work_done = 1;
+  }
+
+  $scope.addTaskWithCategory = function(category) {
+    var task_title = $scope.new_task[category.id];
+    $scope.new_task[category.id] = "";
+
+    $http.post('/api/angular/new_task_with_category', { task_title: task_title, work_category_id: category.id })
+    .then(function(response){
+      $scope.tasks.push(response.data);
+    });
+  };
+
+  $scope.refresh_data_for_calendar = function() {
+    console.log($scope.calendar_task);
+    WorkTask.create({ work_task: $scope.task }, function(){
+      Flash.create('', '任务添加好了!');
+
+      $scope.tasks = WorkTask.get({}, function() {
+      });
+
+    });
+    $scope.calendar_task = {}
+  }
+
+  $scope.refresh_data = function(){
+
+    if($scope.update_id) {
+      WorkTask.put({ id: $scope.update_id, work_task: $scope.task }, function() {
+        Flash.create('', '任务更新好了!');
+      });
+    }else {
+      WorkTask.create({ work_task: $scope.task }, function(response){
+        Flash.create('', '任务添加好了!');
+
+        var new_task = {
+          id: response.id,
+          task_title: response.task_title,
+          task_description: response.description,
+          task_type_id: response.task_type_id,
+          work_category_id: response.work_category_id,
+          before_task_days: 0,
+          month: 0,
+          work_done: 0,
+          expired_at: null
+        }
+
+        $scope.tasks.push(new_task);
+        // $scope.tasks = WorkTask.get({}, function(response) {
+        //   console.log(response);
+        // });
+
+      });
+      $scope.task = {}
+    }
+  };
+
+  $scope.find_task_in_the_type = function(type) {
+    return function(task) {
+      if(task.task_type_id == type.id)
+      {
+        return task;
+      }
+    };
+  }
+
+  $scope.find_done_task_in_the_type = function(type) {
+    return function(task) {
+      if(task.task_type_id == type.id && task.work_done == true)
+      {
+        return task;
+      }
+    };
+  }
+
+  $scope.find_work_done_task = function(task) {
+    if(task.work_done == 1)
+    {
+      return task;
+    }
+  }
+
+}]);

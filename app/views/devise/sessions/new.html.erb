@@ -1,0 +1,504 @@
+<div class="l_nav">
+  <div class="l_logo"><%=image_tag("home_logo.png")%></div>
+  <ul class="l_menu">
+    <li><a ui-sref="index">首页</a></li>
+    <li><a ui-sref="feature">功能</a></li>
+    <li><a ui-sref="about">关于我们</a></li>
+  </ul>
+  <div class="l_right">
+    <a ui-sref="sign_in">登陆</a>
+  </div>
+</div>
+
+
+<div ui-view="view">
+</div>
+
+
+<script type="text/ng-template" id="home.html">
+<div class="main-content" ng-class="animation">
+
+    <div class="hero">
+
+      <div class="hero-logo"><%=image_tag("hero.png")%></div>
+      <div class="hero-title">婚格.让结婚更简单</div>
+      <p>婚格通过婚礼任务管理的形式，帮助新人筹备一场完美的婚礼，</p>
+      <p>让婚礼筹备变的更为简单，让新人沉浸在婚礼筹备的乐趣之中，是我们初衷。</p>
+
+      <form name="myForm">
+      <ul class="hero-form">
+        <li ng-show="sign_up_with.id == 2">
+          <input class="{{ error_class }}" ng-model="$parent.info.username" value="$scope.info.username" type="number" placeholder="输入手机号进行注册..." /><span ng-click="sign_up()" class="signup">立即注册</span>
+          <span class="username_error" ng-show="error">{{ error }}</span>
+        </li>
+        <li ng-show="sign_up_with.id == 1">
+          <input class="{{ error_class }}" ng-model="$parent.info.email" type="email" placeholder="输入Email进行注册..." /><span ng-click="sign_up()" class="signup">立即注册</span>
+          <span class="username_error" ng-show="error">{{ error }}</span>
+        </li>
+      </ul>
+
+    </form>
+
+    </div>
+
+</div>
+</script>
+
+<script type="text/ng-template" id="feature.html">
+
+<div class="main-content">
+
+    <div class="hero">
+
+      <div class="hero-logo"><%=image_tag("icons/function-intro.png")%></div>
+
+      <div class="hero-title"></div>
+
+      <div class="hero-intro">婚格通过婚礼任务管理的形式，帮助新人筹备一场完美的婚礼，<br/>
+      让婚礼筹备变的更为简单，让新人沉浸在婚礼筹备的乐趣之中，是我们团队的初衷。</br>
+      <br/>
+      为一场完美的婚礼做筹备计划是最困难，也是最具有挑战性的任务之一，准新人们需要考虑各方面的婚礼事<br/>
+      项，从选择婚礼日期到选择婚宴菜单，从场地布置到宾客数量，从婚纱礼服的挑选到化妆师的人选，从司仪督导<br/>
+      到摄影摄像。。。等等这些都需要新人们参与其中，统筹并协调每一个环节。
+      </div>
+
+      <hr/>
+
+      <table class="hero-table">
+        <tr>
+          <td><%=image_tag("icons/home-tasktools.png")%></td>
+          <td>
+            <div class="hero-table-title">婚礼任务工具</div>
+            <div class="hero-table-content">
+              一个简单而全面的小工具。可以帮助你们快速的了解婚礼任务，迅速的解决婚礼任务，<br/>
+              并且减少不必要的开支，节约更多的筹备时间。把繁琐的婚礼任务变为享受婚礼的筹备过程，<br/>
+              让结婚变得更为简单！
+            </div>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td><%=image_tag("icons/home-tasklist.png")%></td>
+          <td>
+            <div class="hero-table-title">婚礼任务列表</div>
+            <div class="hero-table-content">
+              是一个在线帮你筹备婚礼的小工具，在这个婚礼任务模板的帮助下，你可以有条不紊的按时<br/>
+              甚至超时完成任务。你可以使用默认的婚礼任务系统，也可以根据你的需要改变里面的 <br/>
+              内容，让你筹备一个属于你的个性化婚礼。这里还有个小工具和大家分享，如果你填写了<br/>
+              你的结婚日期，婚格会根据你的日期把每一项任务安排到每一天，这样就再也不怕有事情遗漏啦！
+            </div>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td><%=image_tag("icons/home-canlendar.png")%></td>
+          <td>
+            <div class="hero-table-title">小日历</div>
+            <div class="hero-table-content">
+              是根据你的婚礼任务创建的一个简单明了的婚礼日历，可以根据婚礼的分类和时间，<br/>
+              显示你的婚礼任务，让你可以根据日历中的任务时间，选择你优先需要处理的任务， <br/>
+              引导你婚礼筹备的方向，顺利的筹备你的婚礼
+            </div>
+
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+</div>
+
+</script>
+
+<script type="text/ng-template" id="about.html">
+<div class="main-content">
+
+    <div class="hero">
+
+      <div class="hero-logo"><%=image_tag("icons/aboutus.png")%></div>
+
+      <div class="hero-list-title">关于我们</div>
+
+      <div class="hero-list-content">
+        婚格是将产品，服务和科技融合在一起的一个工具， 一个致力于让原本繁琐的婚礼筹备变的更简单的团队。<br/>
+        婚礼原本应该是件很浪漫的事情， 但是婚礼的筹备确认困难重重，甚至枯燥的。<br/>
+        为了还原结婚和婚礼这件浪漫的事情本质，我们组建了婚格团队，创建了婚格这个产品。<br/>
+      </div>
+
+      <div class="hero-list-title">联系我们</div>
+
+      <div class="hero-list-content">
+      如果有任何问题，或者需要我们的帮助，可以发送邮件到我们的邮箱。<br/>
+      <a href="mailto: hi@marrynovo.com">hi@marrynovo.com</a>
+      </div>
+
+      <div class="hero-list-title">加入我们</div>
+
+      <div class="hero-list-content">
+      如果你对结婚这个浪漫的事业感兴趣，或者想加入我们的团队，<br/>
+      可以发送邮件到 <a href="mailto: mwang@marrynovo.com">mwang@marrynovo.com</a> 直接与我联系。
+      </div>
+
+    </div>
+
+</div>
+</script>
+
+<script type="text/ng-template" id="sign_up.html">
+<div class="main-content">
+
+    <div class="hero">
+
+      <div class="hero-logo"><%=image_tag("hero.png")%></div>
+
+    </div>
+
+</div>
+</script>
+
+<script type="text/ng-template" id="sign_in.html">
+<div class="main-content">
+
+    <div class="hero">
+
+      <div class="hero-logo"><%=image_tag("hero.png")%></div>
+
+      <div class="hero-title">登录婚格</div>
+
+      <div class="hero_form">
+        <div class="grid-container">
+          <div class="grid-50">
+            <input ng-model="login.username" type="number" placeholder="手机号码" />
+            <div class="helper">还没有账号？ <a ui-sref="index">立即注册</a></div>
+          </div>
+
+          <div class="grid-50">
+            <input ng-model="login.password" type="password" placeholder="密码" />
+            <div class="helper-right"><span ng-click="login_user(login)" class="login-button">登陆</span></div>
+          </div>
+
+          <div class="grid-100">
+
+            <p ng-show="response" class="login-status">{{ response }}</p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+</script>
+
+<script type="text/ng-template" id="profile.html">
+<div class="main-content">
+
+    <div class="hero">
+      <div align="center">
+      <ul class="step_wizard">
+        <li><span class="step finished_step"><i class="icon ion-checkmark-round"></i></span></li>
+        <li><span class="step">2</span></li>
+        <li><span class="step disabled_step">3</span></li>
+      </ul>
+      </div>
+
+      <div class="wizard-title">现在，让我们完善基本资料</div>
+
+      <div class="wizard_form grid-container">
+        <div class="grid-50">
+
+        <!--
+          <div ngf-drop ng-model="$parent.files" class="drop-box" ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true" ngf-accept="'image/*'">拖拽你的头像到这里
+            <p><img ngf-src="files[0]" ngf-default-src="http://placehold.it/150x150/" ngf-accept="'image/*'"></p>
+          </div>
+          -->
+
+        </div>
+
+        <div class="grid-100">
+        <form name="profileForm">
+          <div class="wizard_account">
+            <i ng-show="{{ $parent.info.email }}" class="icon ion-person"></i> {{ $parent.info.email }}
+            <i ng-show="{{ $parent.info.username }}" class="icon ion-person"></i> {{ $parent.info.username }}
+          </div>
+          <style>
+            .column-row {
+              height: 80px;
+              position: relative;
+              display: block;
+            }
+          </style>
+          <div class="column-row">
+
+            <input
+            ui-validate="{ isPasswordNotValid: 'isPasswordNotValid($value)' }"
+            ng-model="$parent.info.password"
+            value="{{ $parent.info.password }}"
+            placeholder="密码"
+            type="password"
+            />
+
+            <span class="error" ng-show="profileForm.$error.isPasswordNotValid">密码长度应该大于6并小于72</span>
+            <span class="success" ng-show="!profileForm.$error.isPasswordNotValid"><i class="icon ion-checkmark-round"></i> 密码正常</span>
+
+
+          </div>
+
+          <div class="column-row">
+
+            <input
+            ui-validate="{ isNameNotValid: 'isNameNotValid($value)' }"
+            ng-model="$parent.info.nickname"
+            value="{{ $parent.info.nickname }}"
+            placeholder="昵称"
+            type="text"
+            />
+
+            <span class="error" ng-show="profileForm.$error.isNameNotValid">输入一个昵称</span>
+            <span class="success" ng-show="!profileForm.$error.isNameNotValid"><i class="icon ion-checkmark-round"></i> 昵称正常</span>
+          </div>
+
+
+          <div class="column-row">
+
+            <input
+            ui-validate="{ isProjectNameNotValid: 'isProjectNameNotValid($value)' }"
+            ng-model="$parent.info.project_name"
+            value="{{ $parent.info.project_name }}"
+            placeholder="婚礼名称"
+            type="text"
+            />
+
+            <span class="error" ng-show="profileForm.$error.isProjectNameNotValid">婚礼名称不少于2个字</span>
+            <span class="success" ng-show="!profileForm.$error.isProjectNameNotValid"><i class="icon ion-checkmark-round"></i> 婚礼名称正常</span>
+          </div>
+
+        </form>
+        </div>
+
+      </div>
+
+      <p align="center">
+        <span ng-show="$parent.info" class="wizard_next" ng-click="invite()">下一步：欢迎使用婚格</span>
+      </p>
+
+    </div>
+
+</div>
+</script>
+
+<script type="text/ng-template" id="welcome.html">
+<div class="main-content">
+
+    <div class="hero">
+
+    <div align="center">
+      <ul class="step_wizard">
+        <li><span class="step finished_step"><i class="icon ion-checkmark-round"></i></span></li>
+        <li><span class="step finished_step"><i class="icon ion-checkmark-round"></i></span></li>
+        <li><span class="step">3</span></li>
+      </ul>
+    </div>
+
+      <div class="wizard-title">欢迎使用婚格</div>
+
+      <p>你已经创建了婚格空间，现在你可以使用婚格来管理和创建你的婚礼任务了。</p>
+
+      <p align="center">
+        <span class="wizard_next" ng-click="enter_hunge()">进入婚格</span>
+      </p>
+
+    </div>
+
+</div>
+</script>
+
+<script type="text/ng-template" id="invite.html">
+<div class="main-content">
+
+    <div class="hero">
+
+    <div align="center">
+      <ul class="step_wizard">
+        <li><span class="step finished_step"><i class="icon ion-checkmark-round"></i></span></li>
+        <li><span class="step finished_step"><i class="icon ion-checkmark-round"></i></span></li>
+        <li><span class="step">3</span></li>
+        <li><span class="step disabled_step">4</span></li>
+      </ul>
+    </div>
+
+      <div class="wizard-title">邀请成员加入你的婚礼团队</div>
+
+      <p>你已经创建了婚格空间，现在你可以通过邮件邀请 婚礼人员帮你更好的筹备婚礼。</p>
+
+      <div class="hero-box">
+        <div class="hero-box-header"><span>通过邮件邀请成员</span></div>
+        <div class="hero-box-body">
+          <p>输入你邀请的成员的Email地址（每行输入一个Email地址，可同时邀请多人）</p>
+          <textarea ng-model="$parent.invite_letter.email_list"></textarea>
+
+
+          <p align="center">
+            <span class="wizard_next" ng-click="send_invite()">下一步：发送你的邀请</span>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+</div>
+</script>
+
+<script type="text/ng-template" id="letter.html">
+<div class="main-content">
+    <div class="hero">
+    <div align="center">
+      <ul class="step_wizard">
+        <li><span class="step finished_step"><i class="icon ion-checkmark-round"></i></span></li>
+        <li><span class="step finished_step"><i class="icon ion-checkmark-round"></i></span></li>
+        <li><span class="step finished_step"><i class="icon ion-checkmark-round"></i></span></li>
+        <li><span class="step">4</span></li>
+      </ul>
+    </div>
+      <div class="wizard-title">邀发送你的<span style="color: #00D5AB;">婚礼筹备</span>邀请，完成这最后一步</div>
+      <p>在这里输入欢迎信息，我们将发送Email给你的婚礼筹备团队成员。 </p>
+      <div class="hero-box">
+        <div class="hero-box-body">
+          <textarea ng-model="$parent.invite_letter.email_content">
+            {{ $parent.invite_letter.email_content }}
+          </textarea>
+          <p align="center">
+            <span class="wizard_next" ng-click="enter()">发送邀请 & 开始使用婚格</span>
+          </p>
+
+        </div>
+      </div>
+    </div>
+</div>
+</script>
+
+<style>
+
+a {
+  color: #F06199;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  font-size: 20px;
+  width: 800px;
+}
+
+.hero p {
+  margin-top: 50px;
+}
+
+.login-status {
+  margin: 100px;
+  padding: 20px;
+  color: rgba(240, 97, 153, 0.5);
+  font-size: 28px !important;
+  border: 10px solid rgba(240, 97, 153, 0.5);
+  border-radius: 20px;
+}
+
+.hero-intro {
+  margin-top: 30px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.hero-table {
+  width: 100%;
+  text-align: left;
+}
+
+.hero-table td {
+  padding-right: 20px;
+  vertical-align: top;
+  padding-bottom: 50px;
+  height: 100px;
+}
+
+.hero-table p {
+  text-align: left;
+}
+
+.hero-table-title {
+  font-size: 24px;
+  font-weight:lighter;
+}
+
+.hero-table-content {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hero-list-title {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.hero-list-content {
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.hero_form {
+  margin-top: 66px;
+}
+
+.hero_form input[type="number"],
+.hero_form input[type="password"]  {
+    display: inline-block;
+    width: 100%;
+    -moz-appearance: textfield;
+    font-size: 16px;
+    height: 40px;
+    border: 1px solid rgba(151, 151, 151, 0.5);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.grid-50 {
+  position: relative;
+}
+
+.helper {
+    position: absolute;
+    left: 10px;
+    font-size: 14px;
+    padding: 0;
+    margin: 10px 2px;
+}
+
+.helper-right {
+    position: absolute;
+    right: 10px;
+    font-size: 14px;
+    padding: 0;
+    margin: 10px 2px;
+}
+
+.login-button {
+  color: #FFFFFF;
+  cursor: pointer;
+  background: #9777B5;
+  border-radius: 5px;
+  padding: 5px 30px;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  background-color: #9B9B9B;
+  height: 1px;
+
+}
+</style>

@@ -1,0 +1,27 @@
+<div class="row">
+	<div>
+		<%=render :partial => "form_generator" , :locals => { :component => @component } %>	
+	</div>
+
+	<div class="">
+
+		<table class="uk-table uk-table-striped">
+		<tr>
+			<td>User</td>
+			<% @component.gears.each do |gear| %>
+				<td><%=gear%></td>
+			<% end %>
+		</tr>
+
+		<% @rows.each do |row| %>
+		<tr>
+			<td><%=row.user.email%></td>
+			<%row.user_columns.each do |column|%>
+				<td><%=column.column_value %></td>
+			<% end %>
+		</tr>
+		<% end %>
+		</table>
+
+	</div>
+</div>

@@ -1,0 +1,305 @@
+<div class="grid-100">
+<nav class="box-sub-nav hide-on-mobile">
+	<ul>		
+		<li>
+			<%=link_to '筹备阶段 <i class="fa fa-angle-double-down"></i>'.html_safe, '#', :class => 'box-dropdown-menu' %>
+			<div class="box-dropdown">
+				<ul>
+					<% @task_catalogs.each do |catalog| %>
+					<li><%=link_to "#{catalog.catalog_name}", sort_by_time_path(catalog.internal_id), :class => 'pjax'  %></li>
+					<% end %>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+</div>
+
+<h2 class="box-timeline-title" align="center">
+	<% if @task_catalog != nil %><%= @task_catalog.catalog_name %><% end %>
+</h2>
+
+
+<p align="center">
+	<a class="box-next-stage" href="<%=new_task_at_path(@task_catalog.id)%>">新任务</a>
+</p>
+
+<div class="box-tl-line hide-on-mobile"></div>
+<table class="box-tl-container">
+
+	<% @tasks.each_with_index do |task,index| %>
+
+		<% if (index+1)%2 == 1 %>
+		<tr>
+			<td>
+				<div class="box-tl-cell box-tl-cell-left">
+					<% if task.done == true %>
+						<div class="box-tl-node hide-on-mobile"></div>
+					<% else %>
+						<div class="box-tl-node-circle hide-on-mobile">
+							<div class="box-tl-node-not-done"></div>
+						</div>
+					<% end %>
+
+					<ul class="box-tl-event">
+						<li class="box-tl-timer">
+							<span class="box-tl-sandglass"></span>
+							<% if task.expired_at %>
+								<%=Time.diff(@today, task.expired_at, "%d")[:diff]%>
+							<% else %>
+								<%=Time.diff(@today, @project.project_date-task.before_task_days.to_i , "%d")[:diff]%>
+							<% end %>
+						</li>
+
+						<li id="<%=task.id%>" class="box-tl-context box-tl-left">
+								<%=task.task_title %>
+
+								<div class="box-tl-type">
+									<% if task.task_type %>
+										<%=task.task_type.type_name %>
+									<% else %>
+										无类型
+									<% end %>
+								</div>
+
+								<div class="box-tl-date">
+									<% if task.expired_at %>
+										<%=task.expired_at.strftime("%Y.%m.%d")%>
+									<% else %>
+										<%=(@project.project_date-task.before_task_days.to_i).strftime("%Y.%m.%d")%>
+									<% end %>
+								</div>
+
+						</li>
+					</ul>
+				</div>
+
+			</td>
+			<td class="hide-on-mobile"></td>
+		</tr>
+		<% else %>
+		<tr>
+				<td class="hide-on-mobile"></td>
+				<td class="box-tl-entity">
+					
+					<div class="box-tl-cell box-tl-cell-right">
+							
+						<% if task.done == true %>
+							<div class="box-tl-node hide-on-mobile"></div>
+						<% else %>
+							<div class="box-tl-node-circle hide-on-mobile">
+								<div class="box-tl-node-not-done"></div>
+							</div>
+						<% end %>
+
+						<ul class="box-tl-event">
+							<li id="<%=task.id%>" class="box-tl-context box-tl-right">
+									<%=task.task_title%>
+
+									<div class="box-tl-type">
+										<% if task.task_type %>
+											<%=task.task_type.type_name %>
+										<% else %>
+											无类型
+										<% end %>
+									</div>
+
+									<div class="box-tl-date">
+										<% if task.expired_at %>
+											<%=task.expired_at.strftime("%Y.%m.%d")%>
+										<% else %>
+											<%=(@project.project_date-task.before_task_days.to_i).strftime("%Y.%m.%d")%>
+											
+										<% end %>
+									</div>
+
+							</li>
+
+							<li class="box-tl-timer">
+								<span class="box-tl-sandglass"></span>
+								<% if task.expired_at %>
+									<%=Time.diff(@today, task.expired_at, "%d")[:diff]%>
+								<% else %>
+										<%=Time.diff(@today, @project.project_date-task.before_task_days.to_i , "%d")[:diff]%>
+								<% end %>
+							</li>						
+						
+						</ul>
+
+
+					</div>
+					</a>
+				</td>
+		</tr>
+		<% end %>
+	<% end %>
+</table>
+
+<div class="box-tl-end" align="center">
+		<a class="box-next-stage" href="<%=sort_by_time_path(@task_catalog.internal_id + 1)%>">下一阶段</a>
+</div>
+
+
+<script>
+$(function(){
+	$('.box-tl-context').on('click', function(e){
+		$('.box-tl-dropdown').remove();
+		var id = $(this).attr('id');
+		var $obj = $(this);
+
+
+		var long_form =' \
+			<form novalidate="novalidate" class="simple_form edit_user_task" id="edit_user_task_'+id+'" action="/task/get_form/'+id+'" accept-charset="UTF-8" method="post"> \
+			<input name="utf8" value="✓" type="hidden"> \
+			<input name="authenticity_token" value="" type="hidden"> \
+			<div class="box-tl-row"> \
+				<textarea class="text optional" placeholder="任务名称" name="user_task[task_title]" id="user_task_task_title"></textarea> \
+			</div> \
+			<div class="box-tl-row"> \
+				<textarea class="text optional" placeholder="任务备注" name="user_task[task_requirement]" id="user_task_task_requirement"></textarea> \
+			</div> \
+			<div class="box-tl-row"> \
+				<input class="string optional box-datetimepicker" placeholder="任务截止日期" name="user_task[expired_at]" id="user_task_expired_at" type="text" readonly="readonly"> \
+			</div> \
+			<div class="box-tl-row"> \
+				<input name="commit" value="保存修改" class="save btn" type="submit"> \
+				<a class="cancel" href="#">x</a> \
+				<input id="finish" name="finish" value="完成任务" class="finish btn" type="button"> \
+				<input id="remove" name="cancel" value="删除任务" class="remove btn" type="button"> \
+			</div> \
+		</form>';
+
+		$obj.closest('.box-tl-cell').parent().append('<div class="box-tl-dropdown">'+long_form+'</div>');
+			
+		$.ajax({
+			url: '<%=show_task_path%>',
+			method: 'post',
+			data: {
+				id: id
+			},
+			success: function(data){
+				task = data.task
+				$("#user_task_task_title").val(task.task_title);
+				$("#user_task_task_requirement").val(task.task_requirement);
+				$("#user_task_expired_at").val(task.expired_at_format);
+			}
+		})
+
+		$('#finish').on('click', function(e){			
+			$target = $(e.target);
+
+			$.ajax({
+				url: "<%=task_finish_path%>",
+				method: "post",
+				data: {
+					id: id
+				},
+				success: function(){
+					$('.box-success').remove();
+					$target.closest('td').find('.box-tl-cell').append($('<p class="box-success">任务完成</p>'));
+					$target.closest('td').find('.box-tl-node-circle').attr({ "class": "box-tl-node" })
+					$target.closest('.box-tl-dropdown').remove();
+				}
+			});
+		});
+
+		$('#remove').on('click', function(e){
+			$target = $(e.target);
+
+			$.ajax({
+				url: "<%=task_remove_path%>",
+				method: "post",
+				data: {
+					id: id
+				},
+				success: function(){
+					$('.box-success').remove();
+					$target.closest('td').find('.box-tl-cell').append($('<p class="box-success">任务已删除</p>'));
+					$target.closest('tr').remove();
+				}
+			});
+		});
+
+		$('.box-datetimepicker').datetimepicker({
+			 	lang:'ch',
+			 	timepicker:false,
+	 			format:'Y.m.d',
+	 			closeOnDateSelect: true,
+	 			scrollInput: false,
+	 			scrollMonth: false
+		});
+
+		// $.ajax({
+		// 	url: '<%=get_form_path%>',
+		// 	method: 'get',
+		// 	data: {
+		// 		id: id
+		// 	},
+		// 	success: function(page) {
+		// 		$obj.closest('.box-tl-cell').parent().append('<div class="box-tl-dropdown">'+page+'</div>');
+					
+		// 		$('#finish').on('click', function(e){			
+		// 			$target = $(e.target);
+
+		// 			$.ajax({
+		// 				url: "<%=task_finish_path%>",
+		// 				method: "post",
+		// 				data: {
+		// 					id: id
+		// 				},
+		// 				success: function(){
+		// 					$('.box-success').remove();
+		// 					$target.closest('td').find('.box-tl-cell').append($('<p class="box-success">任务完成</p>'));
+		// 					$target.closest('td').find('.box-tl-node-circle').attr({ "class": "box-tl-node" })
+		// 					$target.closest('.box-tl-dropdown').remove();
+		// 				}
+		// 			});
+		// 		});
+
+		// 		$('#remove').on('click', function(e){
+		// 			$target = $(e.target);
+
+		// 			$.ajax({
+		// 				url: "<%=task_remove_path%>",
+		// 				method: "post",
+		// 				data: {
+		// 					id: id
+		// 				},
+		// 				success: function(){
+		// 					$('.box-success').remove();
+		// 					$target.closest('td').find('.box-tl-cell').append($('<p class="box-success">任务已删除</p>'));
+		// 					$target.closest('tr').remove();
+		// 				}
+		// 			});
+		// 		});
+
+		// 		$('.box-datetimepicker').datetimepicker({
+		// 			 	lang:'ch',
+		// 			 	timepicker:false,
+		// 	 			format:'Y.m.d',
+		// 	 			closeOnDateSelect: true
+		// 		});
+		// 	}
+		// });
+	});
+
+	$(document).bind('click', function(e){
+		if($(e.target).attr('class') != 'box-dropdown-menu')
+		{
+			$('.box-dropdown').removeClass('box-dropdown-display')
+		}
+	});
+
+	$('.box-sub-nav > ul > li > a').on('click', function(e){
+		e.preventDefault();
+		var $dropdown = $(this).parent().find('.box-dropdown');
+		if(/box\-dropdown\-display/.test($dropdown.attr('class')) == true){
+			$dropdown.removeClass('box-dropdown-display')
+		}else{
+			$('.box-dropdown').removeClass('box-dropdown-display')
+			$dropdown.addClass('box-dropdown-display')
+		}
+	});
+
+});
+</script>

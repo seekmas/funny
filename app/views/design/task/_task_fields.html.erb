@@ -1,0 +1,17 @@
+<div class="nested-fields uk-grid" data-uk-grid-match>
+	<div class="uk-width-1-5">
+		<%=f.input :task_title, :label => false, :placeholder => "任务标题" ,:wrapper_html => false %>
+	</div>
+
+	<div class="uk-width-1-5">
+	<%=f.input :task_requirement, :label => false, :placeholder => "任务要求" ,:wrapper_html => false  %>
+	</div>
+	<div class="uk-width-1-5">
+	<%=f.association :task_type, :label => false, :placeholder => "任务要求" ,:wrapper_html => false  %>
+	</div>
+	<div class="uk-width-1-5">
+	<%=f.input :before_task_days, :label => false, :placeholder => "任务开始天数" ,:wrapper_html => false  %>
+	</div>
+
+	<%=link_to_remove_association 'Remove', f %>
+</div>
