@@ -1,6 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require angularjs/angular
+//= require angular/angular
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-ui-validate/dist/validate
 //= require angular-resource/angular-resource
