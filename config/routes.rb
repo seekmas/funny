@@ -17,16 +17,12 @@ Rails.application.routes.draw do
 				get '/' => 'task#index', :as => :task_index
 				put '/' => 'task#index', :as => :task_index_put
 				get '/struct' => 'task#struct', :as => :task_struct
-
 				get '/edit/:id' => 'task#edit', :as => :task_edit
 				put '/edit/:id' => 'task#edit', :as => :task_edit_put
-
 				get '/delete_task_catalog/:id' => 'task#delete_task_catalog', :as => :delete_task_catalog
 				get '/delete_task_item/:id' => 'task#delete_task_item', :as => :delete_task_item
-
 				get '/task_type/new' => 'task#task_type', :as => :task_type
 				put '/task_type/new' => 'task#task_type', :as => :task_type_put
-
 				get '/task_type/:id' => 'task#edit_task_type', :as => :edit_task_type
 				put '/task_type/:id' => 'task#edit_task_type', :as => :edit_task_type_put
 			end
@@ -53,29 +49,20 @@ Rails.application.routes.draw do
 		scope :app do
 			get '/get_user_task/:user_id' => 'app#get_user_task', :as => 'app_get_user_task', :user_id => /\d+/
 			post '/get_user_task' => 'app#get_user_task', :as => 'app_get_user_task_post'
-
 			get '/get_user_task_catalogs/:user_id' => 'app#get_user_task_catalogs', :as => 'get_user_task_catalogs', :user_id => /\d+/
 			post '/get_user_task_catalogs' => 'app#get_user_task_catalogs', :as => 'get_user_task_catalogs_post'
-
 			get '/get_task_by_id/:id' => 'app#get_task_by_id', :as => 'get_task_by_id'
 			post '/get_task_by_id' => 'app#get_task_by_id', :as => 'get_task_by_id_post'
-
 			get '/get_task_types' => 'app#get_task_types', :as => 'get_task_types'
 			post '/get_task_types' => 'app#get_task_types', :as => 'get_task_types_post'
-
-
 			post '/submit_new_task' => 'app#submit_new_task', :as => 'submit_new_task_post'
-
 			post '/submit_save_task' => 'app#submit_save_task', :as => 'submit_save_task_post'
-
 			post '/signup' => 'app#signup', :as => 'signup_post'
 		end
 
 		scope :authenticate do
-
 			get '/authenticate_user' => 'authenticate#authenticate_user', :as => 'authenticate_user_get'
 			post '/authenticate_user' => 'authenticate#authenticate_user', :as => 'authenticate_user_post'
-
 		end
 
 	end
@@ -101,36 +88,21 @@ Rails.application.routes.draw do
     scope :user do
       post '/' => 'angular#index', :as => 'angular_index_post'
 			post '/user_sign_in' => 'angular#user_sign_in', :as => 'angular_user_sign_in'
-
       get '/sign_in_with' => 'angular#sign_in_with', :as => 'angular_sign_in_with'
       post '/sign_up_with_phone' => 'angular#sign_up_with_phone', :as => 'angular_sign_up_with_phone'
-
       post '/send_invite_email' => 'angular#send_invite_email', :as => 'angular_send_invite_email'
     end
 
 	end
 
 	scope module: :workspace do
-
 		scope :cheerup do
-
 			get '/get_phones/:wedding_code' => 'cheerup#get_phones', :as => 'cheerup_get_phones', :wedding_code => /[0-9a-zA-Z\-]+/
-
 			get '/:wedding_code' => 'cheerup#index', :as => 'cheerup_index', :wedding_code => /[0-9a-zA-Z\-]+/
-
 			get '/join/:wedding_code' => 'cheerup#join', :as => 'cheerup_join', :wedding_code => /[0-9a-zA-Z\-]+/
 			post '/join/:wedding_code' => 'cheerup#join', :as => 'cheerup_join_post', :wedding_code => /[0-9a-zA-Z\-]+/
-
 			get '/photos/:wedding_code' => 'cheerup#photos', :as => 'cheerup_photos', :wedding_code => /[0-9a-zA-Z\-]+/
-
 		end
-
-		scope :dashboard do
-			get '/' => 'dashboard#index', :as => 'dashboard_index'
-		end
-    scope :calendar do
-      get '/' => 'calendar#index', :as => 'calendar_index'
-    end
   end
 
 	scope module: :ajax do

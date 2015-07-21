@@ -7,7 +7,7 @@
   <%= javascript_include_tag 'work', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body  ng-controller="ProjectController">
+<body>
 
 <div class="box-header-bar">
   <%= render "work_header_bar" %>
@@ -16,8 +16,10 @@
 <div class="box-wrap" style="margin-top: 50px;">
 	<%= render "work_left_side" %>
 
-	<div class="{{ main_style }}">
+	<div class="box-main">
 		<div  id="main-content">
+      
+      <div ui-view></div>
 			<%= yield %>
 		</div>
 	</div>

@@ -13,6 +13,7 @@ module Workspace
     end
 
     protected
+    
     def init_with_tasks
       @work_categories = WorkCategory.find_by({ :work_id => @work.id })
       if @work_categories == nil

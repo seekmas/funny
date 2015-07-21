@@ -1,0 +1,126 @@
+<div ng-controller="ProjectController" class="grid-container animated fadeIn" style="margin-bottom: 100px;">
+  <div class="p_header">
+    <div class="p_header_hero">
+      <table>
+        <tr>
+          <td>
+            <%=image_tag("icons/miss_ge.png")%>
+          </td>
+          <td>
+            <h1>欢迎来到婚礼任务</h1>
+            <p>婚礼任务是在线帮你筹备婚礼的小工具， 你可以使用默认的婚礼任务系统，也可以根据你的需要改变里面的内容，让你筹备一个属于你的个性化婚礼。 如果你填写了你的结婚日期，婚格会根据你的日期把每一项任务安排到每一天，这样就再也不怕有事情遗漏啦！ </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="p_list" cg-busy="{promise:promise_task , message:'正在加载我的任务',backdrop:false,delay:300,minDuration:700}">
+
+  <div flash-message="3000"></div>
+
+  <div class="connection"></div>
+
+  <table class="p_task_table">
+    <tr>
+      <td class="p_head"><span class="p_circle"><span class="p_dot"></span></span></td>
+      <td class="p_head_title">我定义的任务</td>
+      <td><span class="p_line"></span></td>
+    </tr>
+  </table>
+
+  <table class="p_task_table">
+    <tr class="info" ng-mouseenter="show[$index] = true" ng-mouseleave="show[$index] = false" ng-repeat="t in ( filteredTasks = (tasks | filter: find_task_with_empty_category())) ">
+      <td class="p_task_blank"></td>
+      <td  ng-click="finish_task(t)" ng-show="t.work_done == 0" style="width: 20px;text-align: center;">
+        <%= image_tag("icons/uncheck.png", :class => 'uncheck')%>
+      </td>
+      <td ng-click="unfinish_task(t)" ng-show="t.work_done == 1" style="width: 20px;text-align: center;">
+        <%= image_tag("icons/check.png", :class => 'check')%>
+      </td>
+      <td ng-show="t.work_done == 0" class="p_task_detail">
+        <span class="title unfinished" ng-click="task_detail(t)">{{ t.task_title }}</span>
+        <span class="action" ng-show="show[$index]">
+          <i ng-click="remove_task(t)" class="icon ion-trash-a"></i>
+        </span>
+      </td>
+      <td ng-show="t.work_done == 1" class="p_task_detail">
+        <span class="title finished" ng-click="task_detail(t)">{{ t.task_title }}</span>
+        <span class="action" ng-show="show[$index]">
+          <i ng-click="remove_task(t)" class="icon ion-trash-a"></i>
+        </span>
+      </td>
+    </tr>
+  </table>
+  <div ng-repeat="category in categories">
+    <table class="p_task_table">
+      <tr>
+        <td class="p_head"><span class="p_circle"><span class="p_dot"></span></span></td>
+        <td class="p_head_title">{{ category.name }}</td>
+        <td><span class="p_line"></span></td>
+      </tr>
+    </table>
+
+    <table class="p_task_table">
+
+
+
+      <tr class="info" ng-mouseenter="show[$index] = true" ng-mouseleave="show[$index] = false" ng-repeat="t in ( filteredTasks = (tasks | filter: find_task_with_category(category))) ">
+
+        <td class="p_task_blank"></td>
+
+        <td  ng-click="finish_task(t)" ng-show="t.work_done == 0" style="width: 20px;text-align: center;">
+          <%= image_tag("icons/uncheck.png", :class => 'uncheck')%>
+        </td>
+
+        <td ng-click="unfinish_task(t)" ng-show="t.work_done == 1" style="width: 20px;text-align: center;">
+          <%= image_tag("icons/check.png", :class => 'check')%>
+        </td>
+
+        <td ng-show="t.work_done == 0" class="p_task_detail">
+          <span class="title unfinished" ng-click="task_detail(t)">{{ t.task_title }}</span>
+
+          <span class="action" ng-show="show[$index]">
+            <i ng-click="remove_task(t)" class="icon ion-trash-a"></i>
+          </span>
+        </td>
+
+        <td ng-show="t.work_done == 1" class="p_task_detail">
+          <span class="title finished" ng-click="task_detail(t)">{{ t.task_title }}</span>
+          <span class="action" ng-show="show[$index]">
+            <i ng-click="remove_task(t)" class="icon ion-trash-a "></i>
+          </span>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td class="p_task_blank"></td>
+        <td style="width: 20px;font-size: 20px;text-align: center;"><i class="icon ion-ios-plus-empty"></i></td>
+        <td>
+
+        <form ng-submit="addTaskWithCategory(category,filteredTasks)">
+          <input ng-model="new_task[category.id]" class="new_line" type="text" placeholder="在这里添加新的任务" />
+        </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <table class="p_task_table">
+    <tr>
+      <td class="p_head"><span class="p_circle"><span class="p_dot"></span></span></td>
+      <td class="p_head_title">新婚</td>
+      <td><span class="p_line"></span></td>
+    </tr>
+  </table>
+
+  </div>
+
+
+  <div class="p_form" ng-show="edit_display">
+
+    <%= render "pages_form/task_field" %>
+
+  </div>
+</div>

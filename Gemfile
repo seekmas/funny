@@ -40,3 +40,4 @@ gem "socialization"
 gem 'ngannotate-rails'
 gem "uuidtools"
 gem "paperclip"
+gem "high_voltage"

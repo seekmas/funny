@@ -1,24 +1,15 @@
 <nav id="menu" class="box-panel-project" role="navigation" style="margin-top: 50px;">
 
-  <!-- <div class="box-deliver"></div> -->
-  <!-- <table>
-    <tr>
-      <td><%=image_tag("empty.png")%></td>
-      <td>1个婚礼成员</td>
-      <td><span class="box-yellow">立即邀请</span></td>
-    </tr>
-  </table> -->
-
   <p align="center">欢迎你, <%= current_user.nickname %></p>
 
   <table class="nav">
-    <tr>
+    <tr ui-sref="task">
       <td width="40px"><%=image_tag("icons/mytask.png")%></td>
-      <td><%= link_to '婚礼任务' , root_path %></td>
+      <td><a>婚礼任务</a></td>
     </tr>
-    <tr>
+    <tr ui-sref="calendar">
       <td><%=image_tag("icons/mycalendar.png")%></td>
-      <td><%=link_to '小日历' , calendar_index_path %></td>
+      <td><a>小日历</a></td>
     </tr>
     <tr>
       <td><%=image_tag("icons/logout.png")%></td>

@@ -3,14 +3,26 @@
 var app = angular.module("project",
 [
   'cgBusy',
-  '720kb.datepicker',
   'ngResource',
-  'checklist-model',
   'flash',
+  'ui.router',
   'ui.sortable',
   'oitozero.ngSweetAlert',
   'angularMoment'
 ])
+
+.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise("/task");
+  $stateProvider
+    .state('task', {
+      url: "/task",
+      templateUrl: "/pages/task"
+    })
+    .state('calendar', {
+      url: "/calendar",
+      templateUrl: "/pages/calendar"
+    });
+})
 
 .run(function(amMoment){
   amMoment.changeLocale('zh-cn');

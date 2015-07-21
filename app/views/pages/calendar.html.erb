@@ -1,4 +1,4 @@
-<div class="grid-container animated fadeIn" style="margin-bottom: 100px;">
+<div ng-controller="ProjectController" class="grid-container animated fadeIn" style="margin-bottom: 100px;">
   <div class="p_header">
     <div class="p_header_hero">
 
@@ -127,47 +127,8 @@
 
 <div class="p_form" ng-show="edit_display">
 
-  <%= render "workspace/dashboard/task_field" %>
+  <%= render "pages_form/task_field" %>
 
 </div>
 
 </div>
-
-<style>
-.p_month .p_today{
-  padding: 0;
-  margin: 0;
-  width: 170px;
-  border-bottom: 1px solid rgba(155, 155, 155, 0.5);
-}
-.p_month img {
-  position: absolute;
-  top: 0px;
-  left: 2px;
-}
-ul.p_calendar_info {
-  list-style: none;
-}
-
-ul.p_calendar_info li {
-
-  width: 20px;
-  color: #18ABE0;
-  line-height:22px;
-  display: inline-block;
-}
-
-ul.p_calendar_info li.p_calendar_item {
-  width: 120px;
-  text-align: center;
-}
-
-ul.p_calendar_info li.p_calendar_item .p_calendar_title {
-  font-size: 20px;
-}
-
-ul.p_calendar_info li.p_calendar_item .p_calendar_content {
-  font-size: 14px;
-}
-
-</style>

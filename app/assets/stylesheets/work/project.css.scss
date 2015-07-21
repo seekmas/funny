@@ -7,6 +7,71 @@ input[type="text"], input[type="number"], input[type="email"], input[type="url"]
     width: 100%;
 }
 
+.finished {
+  color: #CBCEDB;
+  text-decoration:line-through;
+}
+
+.p_list .icon {
+   color: #9777B5;
+}
+
+.p_month .p_today{
+  padding: 0;
+  margin: 0;
+  width: 170px;
+  border-bottom: 1px solid rgba(155, 155, 155, 0.5);
+}
+.p_month img {
+  position: absolute;
+  top: 0px;
+  left: 2px;
+}
+ul.p_calendar_info {
+  list-style: none;
+}
+
+ul.p_calendar_info li {
+
+  width: 20px;
+  color: #18ABE0;
+  line-height:22px;
+  display: inline-block;
+}
+
+ul.p_calendar_info li.p_calendar_item {
+  width: 120px;
+  text-align: center;
+}
+
+ul.p_calendar_info li.p_calendar_item .p_calendar_title {
+  font-size: 20px;
+}
+
+ul.p_calendar_info li.p_calendar_item .p_calendar_content {
+  font-size: 14px;
+}
+
+.alert {
+  z-index: 999;
+  position: relative;
+  border-radius: 5px;
+  color: #FFFFFF;
+  position: fixed;
+  top: 100px;
+  background: #F06199;
+  padding: 10px 20px;
+}
+
+.sr-only {
+    display: none;
+}
+
+button.close,
+button.close:hover
+{
+  display: none;
+}
 
 .p_header_hero table {
   width: 100%;
