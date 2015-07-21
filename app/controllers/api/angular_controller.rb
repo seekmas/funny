@@ -39,12 +39,12 @@ module Api
       # render :json => params
       # return
       if params[:info][:username]
-        @user = User.create({ 
-          :email => "#{params[:info][:username]}@hunge.me", 
-          :username => params[:info][:username].to_i, 
-          :password => params[:info][:password], 
+        @user = User.create({
+          :email => "#{params[:info][:username]}@hunge.me",
+          :username => params[:info][:username].to_i,
+          :password => params[:info][:password],
           :password_confirmation => params[:info][:password],
-          :nickname => params[:info][:nickname] 
+          :nickname => params[:info][:nickname]
 
         })
         @workspace = Work.find_or_create_by({ :work_title => params[:info][:project_name], :user_id => @user.id })

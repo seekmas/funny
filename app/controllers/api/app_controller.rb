@@ -90,39 +90,70 @@ module Api
 			if @user == nil
 				@user = User.create(get_signup_user)
 				@user.save
+				@work = Work.find_or_create_by({
+						:user_id => @user.id
+				})
+				@work.target_date = Date.today
+				@work.save
 
-		  	@project = Project.find_or_create_by({ :user_id => @user.id })
-		    if @project.project_date == nil
-		      @project.project_date = DateTime.now
-		      @project.save
-		    end
+				@work_categories = WorkCategory.find_by({ :work_id => @work.id })
+	      if @work_categories == nil
+	        @categories = TaskCatalog.all
+	        @categories.each do |category|
+	          new_category = WorkCategory.create({
+	            :name => category.catalog_name,
+	            :work_id => @work.id,
+	            :is_allowed => true
+	          })
 
-		  	if @task_catalogs = UserTaskCatalog.where(:project_id => @project.id).count == 0
-		  		TaskCatalog.where(:available => true).all.each do |catalog|
-		  			#user_task_catalog
+	          @tasks = Task.where({ :task_catalog_id => category.id })
+	          @tasks.each do |task|
+	            WorkTask.create({
+	              :task_title => task.task_title,
+	              :work_id => @work.id,
+	              :expired_at => nil,
+	              :task_description => task.task_requirement,
+	              :user_id => current_user.id,
+	              :work_category_id => new_category.id,
+	              :task_type_id => task.task_type_id,
+	              :before_task_days => task.before_task_days,
+	              :work_done => false
+	            })
+	          end
+	        end
+	      end
 
-		        counter = UserTaskCatalog.where(:project_id => @project.id).count
-		        @u_t_c = UserTaskCatalog.create({
-		          :catalog_name => catalog.catalog_name,
-		          :project_id => @project.id,
-		          :available => true ,
-		          :internal_id => counter+1
-		        });
+		  	# @project = Project.find_or_create_by({ :user_id => @user.id })
+		    # if @project.project_date == nil
+		    #   @project.project_date = DateTime.now
+		    #   @project.save
+		    # end
 
-		        Task.where(:task_catalog_id => catalog.id).all.each do |task|
-		  				UserTask.create({
-		  					:task_title => task.task_title,
-		  					:task_requirement => task.task_requirement,
-		  					:user_task_catalog_id => @u_t_c.id,
-		            :task_type_id => task.task_type_id,
-		  					:done => false,
-		            :is_removed => false,
-		            :before_task_days => task.before_task_days
-		  				})
-		  			end
-		  		end
-		  	end
-
+		  	# if @task_catalogs = UserTaskCatalog.where(:project_id => @project.id).count == 0
+		  	# 	TaskCatalog.where(:available => true).all.each do |catalog|
+		  	# 		#user_task_catalog
+				#
+		    #     counter = UserTaskCatalog.where(:project_id => @project.id).count
+		    #     @u_t_c = UserTaskCatalog.create({
+		    #       :catalog_name => catalog.catalog_name,
+		    #       :project_id => @project.id,
+		    #       :available => true ,
+		    #       :internal_id => counter+1
+		    #     });
+				#
+		    #     Task.where(:task_catalog_id => catalog.id).all.each do |task|
+		  	# 			UserTask.create({
+		  	# 				:task_title => task.task_title,
+		  	# 				:task_requirement => task.task_requirement,
+		  	# 				:user_task_catalog_id => @u_t_c.id,
+		    #         :task_type_id => task.task_type_id,
+		  	# 				:done => false,
+		    #         :is_removed => false,
+		    #         :before_task_days => task.before_task_days
+		  	# 			})
+		  	# 		end
+		  	# 	end
+		  	# end
 				render :json => @user
 			else
 				render :json => { response: "账号已经注册过了，请登录" }
