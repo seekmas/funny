@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="box-header-bar">
+<div ng-controller="ProjectController" class="box-header-bar">
   <%= render "work_header_bar" %>
 </div>
 
@@ -18,9 +18,7 @@
 
 	<div class="box-main">
 		<div  id="main-content">
-      
       <div ui-view></div>
-			<%= yield %>
 		</div>
 	</div>
 
