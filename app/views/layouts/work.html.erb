@@ -7,9 +7,9 @@
   <%= javascript_include_tag 'work', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-controller="ProjectController">
 
-<div ng-controller="ProjectController" class="box-header-bar">
+<div class="box-header-bar">
 
   <%= render "work_header_bar" %>
 
