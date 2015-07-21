@@ -52,10 +52,10 @@ module Api
 			@work = Work.find_by({ :user_id => params[:user_id] })
 
 			@work_categories = WorkCategory.find_by({ :work_id => @work.id })
-			if @work_categories == nil
+			if @work_categories.count < 10
 				@categories = TaskCatalog.all
 				@categories.each do |category|
-					new_category = WorkCategory.create({
+					new_category = WorkCategory.find_or_create_by({
 						:name => category.catalog_name,
 						:work_id => @work.id,
 						:is_allowed => true
