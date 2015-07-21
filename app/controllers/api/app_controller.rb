@@ -50,8 +50,7 @@ module Api
 		def get_user_task
 			#@project = Project.find_by({ :user_id => params[:user_id] })
 			@work = Work.find_by({ :user_id => params[:user_id] })
-
-			@work_categories = WorkCategory.find_by({ :work_id => @work.id })
+			@work_categories = WorkCategory.where({ :work_id => @work.id }).all
 			if @work_categories.count < 10
 				@categories = TaskCatalog.all
 				@categories.each do |category|
